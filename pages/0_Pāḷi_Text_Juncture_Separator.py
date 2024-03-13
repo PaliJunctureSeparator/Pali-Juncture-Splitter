@@ -10,6 +10,13 @@ LOGGER = get_logger(__name__)
 st.set_page_config(page_title="Pāḷi Text Juncture Separator", page_icon="🌴")
 
 # Sidebar
+
+st.sidebar.header("Language")
+st.sidebar.write("""<div style="width:100%;text-align:center;"><a href="https://streamlit.io" style="float:center"><img src="https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" width="22px"></img></a></div>""", unsafe_allow_html=True)
+st.sidebar.write("""<div style="width:100%;text-align:center;"><a href="https://streamlit.io" style="float:center"><img src="https://i.pinimg.com/736x/91/3d/f8/913df8098c7237aae279c4628302f49c.jpg" width="22px"></img></a></div>""", unsafe_allow_html=True)
+
+st.sidebar.divider()
+
 st.sidebar.header("Customize your conversion:")
 
 st.markdown("<h1 style='text-align: center;'>Pāḷi Text Juncture Separator 🌴</h1>", unsafe_allow_html=True)
