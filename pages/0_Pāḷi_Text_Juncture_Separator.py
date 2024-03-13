@@ -4,6 +4,7 @@ from streamlit.hello.utils import show_code
 import altair as alt
 import numpy as np
 import pandas as pd
+import pyperclip
 
 LOGGER = get_logger(__name__)
 
@@ -17,7 +18,7 @@ st.markdown("<h5 style='text-align: center;'>Read Pāḷi verses fluently.</h5>"
 st.divider()
 """
 **What is it and who is it for?** \n
-The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
+The _Pāḷi Text Juncture Separator_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
 It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instructors looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
 """
 st.divider()
@@ -2320,6 +2321,10 @@ def animation_demo() -> None:
         NASAL_NG = nasal_ng
 
     st.write(NASAL_NG)
+
+if st.button('Copy'):
+    pyperclip.copy(NASAL_NG)
+    st.success('Text copied successfully!')
 
 animation_demo()
 
