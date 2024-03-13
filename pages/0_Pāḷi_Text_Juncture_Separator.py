@@ -4,7 +4,6 @@ from streamlit.hello.utils import show_code
 import altair as alt
 import numpy as np
 import pandas as pd
-import pyperclip
 
 LOGGER = get_logger(__name__)
 
@@ -2321,10 +2320,6 @@ def animation_demo() -> None:
         NASAL_NG = nasal_ng
 
     st.write(NASAL_NG)
-
-if st.button('Copy'):
-    pyperclip.copy(NASAL_NG)
-    st.success('Text copied successfully!')
 
 animation_demo()
 
