@@ -1892,7 +1892,7 @@ def animation_demo() -> None:
     IṂ = AṂ.replace("I"+sepa+"Ṃ", "I"+"Ṃ")
     UṂ = IṂ.replace("U"+sepa+"Ṃ", "U"+"Ṃ")
 
-    AṀ = OṂ.replace("A"+sepa+"Ṁ", "A"+"Ṁ")
+    AṀ = UṂ.replace("A"+sepa+"Ṁ", "A"+"Ṁ")
     IṀ = AṀ.replace("I"+sepa+"Ṁ", "I"+"Ṁ")
     UṀ = IṀ.replace("U"+sepa+"Ṁ", "U"+"Ṁ")
 
