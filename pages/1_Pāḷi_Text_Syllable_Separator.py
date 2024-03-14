@@ -2193,7 +2193,7 @@ def animation_demo() -> None:
     if nñ_check:
         nasal_nñ = ñÑ_to_nÑ
     else:
-        nasal_nñ = u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon_OR_Ṁ_to_Ṅ_sepa_G
+        nasal_nñ = sepa_colon_or_Ṁ_to_Ṅ_sepa_G
 
     # Nasal ṅ, ṃ, ṁ → ng
         #lowercase
