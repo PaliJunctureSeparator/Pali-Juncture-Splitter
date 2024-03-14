@@ -2034,7 +2034,39 @@ def animation_demo() -> None:
     ev_sepa_h = ūv_sepa_h.replace("e"+sepa+"v"+sepa+"h", "e"+"v"+sepa+"h")
     ov_sepa_h = ev_sepa_h.replace("o"+sepa+"v"+sepa+"h", "o"+"v"+sepa+"h")
     #UPPERCASE
-    ĀÑ_sepa_H = ov_sepa_h.replace("Ā"+sepa+"Ñ"+sepa+"H", "Ā"+"Ñ"+sepa+"H")
+    AÑ_sepa_H = ov_sepa_h.replace("A"+sepa+"Ñ"+sepa+"H", "A"+"Ñ"+sepa+"H")
+    IÑ_sepa_H = AÑ_sepa_H.replace("I"+sepa+"Ñ"+sepa+"H", "I"+"Ñ"+sepa+"H")
+    UÑ_sepa_H = IÑ_sepa_H.replace("U"+sepa+"Ñ"+sepa+"H", "U"+"Ñ"+sepa+"H")
+
+    AṆ_sepa_H = UÑ_sepa_H.replace("A"+sepa+"Ṇ"+sepa+"H", "A"+"Ṇ"+sepa+"H")
+    IṆ_sepa_H = AṆ_sepa_H.replace("I"+sepa+"Ṇ"+sepa+"H", "I"+"Ṇ"+sepa+"H")
+    UṆ_sepa_H = IṆ_sepa_H.replace("U"+sepa+"Ṇ"+sepa+"H", "U"+"Ṇ"+sepa+"H")
+
+    AN_sepa_H = UṆ_sepa_H.replace("A"+sepa+"N"+sepa+"H", "A"+"N"+sepa+"H")
+    IN_sepa_H = AN_sepa_H.replace("I"+sepa+"N"+sepa+"H", "I"+"N"+sepa+"H")
+    UN_sepa_H = IN_sepa_H.replace("U"+sepa+"N"+sepa+"H", "U"+"N"+sepa+"H")
+
+    AM_sepa_H = UN_sepa_H.replace("A"+sepa+"M"+sepa+"H", "A"+"M"+sepa+"H")
+    IM_sepa_H = AM_sepa_H.replace("I"+sepa+"M"+sepa+"H", "I"+"M"+sepa+"H")
+    UM_sepa_H = IM_sepa_H.replace("U"+sepa+"M"+sepa+"H", "U"+"M"+sepa+"H")
+
+    AY_sepa_H = UM_sepa_H.replace("A"+sepa+"Y"+sepa+"H", "A"+"Y"+sepa+"H")
+    IY_sepa_H = AY_sepa_H.replace("I"+sepa+"Y"+sepa+"H", "I"+"Y"+sepa+"H")
+    UY_sepa_H = IY_sepa_H.replace("U"+sepa+"Y"+sepa+"H", "U"+"Y"+sepa+"H")
+
+    AḶ_sepa_H = UY_sepa_H.replace("A"+sepa+"Ḷ"+sepa+"H", "A"+"Ḷ"+sepa+"H")
+    IḶ_sepa_H = AḶ_sepa_H.replace("I"+sepa+"Ḷ"+sepa+"H", "I"+"Ḷ"+sepa+"H")
+    UḶ_sepa_H = IḶ_sepa_H.replace("U"+sepa+"Ḷ"+sepa+"H", "U"+"Ḷ"+sepa+"H")
+
+    AL_sepa_H = UḶ_sepa_H.replace("A"+sepa+"L"+sepa+"H", "A"+"L"+sepa+"H")
+    IL_sepa_H = AL_sepa_H.replace("I"+sepa+"L"+sepa+"H", "I"+"L"+sepa+"H")
+    UL_sepa_H = IL_sepa_H.replace("U"+sepa+"L"+sepa+"H", "U"+"L"+sepa+"H")
+
+    AV_sepa_H = UL_sepa_H.replace("A"+sepa+"V"+sepa+"H", "A"+"V"+sepa+"H")
+    IV_sepa_H = AV_sepa_H.replace("I"+sepa+"V"+sepa+"H", "I"+"V"+sepa+"H")
+    UV_sepa_H = IV_sepa_H.replace("U"+sepa+"V"+sepa+"H", "U"+"V"+sepa+"H")
+
+    ĀÑ_sepa_H = UV_sepa_H.replace("Ā"+sepa+"Ñ"+sepa+"H", "Ā"+"Ñ"+sepa+"H")
     ĪÑ_sepa_H = ĀÑ_sepa_H.replace("Ī"+sepa+"Ñ"+sepa+"H", "Ī"+"Ñ"+sepa+"H")
     ŪÑ_sepa_H = ĪÑ_sepa_H.replace("Ū"+sepa+"Ñ"+sepa+"H", "Ū"+"Ñ"+sepa+"H")
     EÑ_sepa_H = ŪÑ_sepa_H.replace("E"+sepa+"Ñ"+sepa+"H", "E"+"Ñ"+sepa+"H")
