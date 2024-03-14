@@ -2180,12 +2180,12 @@ def animation_demo() -> None:
         st.markdown('''
         :gray[The separated text will be shown here.]''')
     if nasal_check:
-        u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon_OR_Ṁ_to_Ṅ_sepa_G = Ṁ_to_Ṅ_sepa_G
+        sepa_colon_or_Ṁ_to_Ṅ_sepa_G = Ṁ_to_Ṅ_sepa_G
     else:
-        u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon_OR_Ṁ_to_Ṅ_sepa_G = u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon
+        sepa_colon_or_Ṁ_to_Ṅ_sepa_G = sepa_colon
 
     # Nasal ññ → nñ
-    ññ_to_nñ = u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon_OR_Ṁ_to_Ṅ_sepa_G.replace ("ñ"+sepa+"ñ", "n"+sepa+"ñ")
+    ññ_to_nñ = sepa_colon_or_Ṁ_to_Ṅ_sepa_G.replace ("ñ"+sepa+"ñ", "n"+sepa+"ñ")
     ÑÑ_to_NÑ = ññ_to_nñ.replace("Ñ"+sepa+"Ñ", "N"+sepa+"Ñ")
     Ññ_to_Nñ = ÑÑ_to_NÑ.replace("Ñ"+sepa+"ñ", "N"+sepa+"ñ")
     ñÑ_to_nÑ = Ññ_to_Nñ.replace("ñ"+sepa+"Ñ", "n"+sepa+"Ñ")
