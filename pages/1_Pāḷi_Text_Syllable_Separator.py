@@ -7,17 +7,24 @@ import pandas as pd
 
 LOGGER = get_logger(__name__)
 
-st.set_page_config(page_title="Pāḷi Text Juncture Separator", page_icon="🌴")
+st.set_page_config(page_title="Pāḷi Text Syllable Separator", page_icon="🌴")
 
 # Sidebar
+
+st.sidebar.header("Language")
+st.sidebar.write("""<div style="width:100%;"><img src="https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" width="22px"> English</img></div>
+                 <div style="width:100%;"><a href="https://translate.google.co.id/?hl=id&sl=en&tl=id&op=translate"><img src="https://i.pinimg.com/736x/91/3d/f8/913df8098c7237aae279c4628302f49c.jpg" width="22px"> Bahasa Indonesia</img></a></div>""", unsafe_allow_html=True)
+ 
+st.sidebar.divider()
+
 st.sidebar.header("Customize your conversion:")
 
-st.markdown("<h1 style='text-align: center;'>Pāḷi Text Juncture Separator 🌴</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Pāḷi Text Syllable Separator 🌴</h1>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center;'>Read Pāḷi verses fluently.</h5>", unsafe_allow_html=True)
 st.divider()
 """
 **What is it and who is it for?** \n
-The _Pāḷi Text Juncture Separator_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
+The _Pāḷi Text Syllable Separator_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
 It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instructors looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
 """
 st.divider()
@@ -40,10 +47,6 @@ def animation_demo() -> None:
     # Split text in UPPERCASE
     uppercase_check = st.sidebar.checkbox(label='Split text in UPPERCASE')
 
-    # Continuous Reading
-    continuous_check = st.sidebar.checkbox(label='Continuous reading')
-    st.sidebar.caption('↳ ignore phrase/line breaks and punctuation pauses: commas, semi-colons, colons, periods')
-
     # Anusvāra/niggahīta standard conversion (ṃ ⇄ ṁ)
     anusvara_select = st.sidebar.selectbox(
     "Anusvāra/niggahīta standard conversion  \n(ṃ ⇄ ṁ)",
@@ -52,11 +55,11 @@ def animation_demo() -> None:
     placeholder="None",
     )
 
-    # Default & Custom Juncture Sign
+    # Default & Custom Separator Sign
     def_sepa= " — "
-    juncture_placeholder = "Optional"
-    custom_sepa = st.sidebar.text_input(label='Customize your own juncture sign:', placeholder=juncture_placeholder)
-    st.sidebar.caption('↳ try _ , - , ^ , / , \ , = , ~ , | , )( , }{ , or ][ ')
+    sepa_placeholder = "Optional"
+    custom_sepa = st.sidebar.text_input(label='Customize your own separator sign:', placeholder=sepa_placeholder)
+    st.sidebar.caption('↳ try • , _ , - , ^ , / , \ , = , ~ , | , )( , }{ , or ][ ')
     if custom_sepa == '':
         sepa=def_sepa
     else:
@@ -65,9 +68,12 @@ def animation_demo() -> None:
     #Fix line breaks to double whitespaces and line breaks
     fixed_text= insert_text.replace('\n','  \n')
 
-    # Insert juncture sign after long vocals (ā, ī, ū, e, o)
+    # Insert separator sign after long vowels (ā, ī, ū, e, o)
     # lowercase
-    added_V_ā_sepa = fixed_text.replace('ā','ā'+sepa)
+    added_V_a_sepa = fixed_text.replace('a','a'+sepa)
+    added_V_i_sepa = added_V_a_sepa.replace('i','i'+sepa)
+    added_V_u_sepa = added_V_i_sepa.replace('u','u'+sepa)
+    added_V_ā_sepa = added_V_u_sepa.replace('ā','ā'+sepa)
     added_V_ī_sepa = added_V_ā_sepa.replace('ī','ī'+sepa)
     added_V_ū_sepa = added_V_ī_sepa.replace('ū','ū'+sepa)
     added_V_e_sepa = added_V_ū_sepa.replace('e','e'+sepa)
@@ -1408,7 +1414,7 @@ def animation_demo() -> None:
     added_V_Ū_sepa = added_V_Ī_sepa.replace('Ū', 'Ū'+sepa)
     added_V_E_sepa = added_V_Ū_sepa.replace('E', 'E'+sepa)
     added_V_O_sepa = added_V_E_sepa.replace('O', 'O'+sepa)
-    # Insert juncture sign inbetween 1st, 3rd and 5th  vaggas (unaspirated and nasals, aspirated combinations are unnecessary) double consonants
+    # Insert separator sign inbetween 1st, 3rd and 5th  vaggas (unaspirated and nasals, aspirated combinations are unnecessary) double consonants
     # lowercase
     # kk, gg, ṅṅ, ṅk, ṅg,
     # cc, jj, ññ, ñc, ñj
@@ -1481,7 +1487,7 @@ def animation_demo() -> None:
     M_sepa_P = M_sepa_M.replace("MP","M"+sepa+"P")
     M_sepa_B = M_sepa_P.replace("MB","M"+sepa+"B")
 
-    # Insert juncture sign after the letter ṃ:
+    # Insert separator sign after the letter ṃ:
     # lowercase
     if uppercase_check:
         m_sepa_b_or_M_sepa_B = M_sepa_B
@@ -1491,7 +1497,7 @@ def animation_demo() -> None:
     # UPPERCASE
     Ṃ_sepa = ṃ_sepa.replace("Ṃ","Ṃ"+sepa)
 
-    # Insert juncture sign after the letter ṁ:
+    # Insert separator sign after the letter ṁ:
     # lowercase
     if uppercase_check:
         ṁ_sepa_or_Ṁ_sepa = Ṃ_sepa
@@ -1501,7 +1507,7 @@ def animation_demo() -> None:
     # UPPERCASE
     Ṁ_sepa = ṁ_sepa.replace("Ṁ","Ṁ"+sepa)
 
-    # Insert juncture sign after the letter h and s if they preceed the letter m:
+    # Insert separator sign after the letter h and s if they preceed the letter m:
     # lowercase
     if uppercase_check:
         ṁ_sepa_or_Ṁ_sepa = Ṁ_sepa
@@ -1513,7 +1519,7 @@ def animation_demo() -> None:
     H_sepa_M = s_sepa_m.replace("HM","H"+sepa+"M")
     S_sepa_M = H_sepa_M.replace("SM","S"+sepa+"M")
         
-    # Insert juncture sign after the letters ñ, ṇ, n, m, y, ḷ, l, and v if they preceed the letter h:
+    # Insert separator sign after the letters ñ, ṇ, n, m, y, ḷ, l, and v if they preceed the letter h:
     # lowercase
     if uppercase_check:
         s_sepa_m_or_S_sepa_M = S_sepa_M
@@ -1537,7 +1543,7 @@ def animation_demo() -> None:
     L_sepa_H = Ḷ_sepa_H.replace("LH","L"+sepa+"H")
     V_sepa_H = L_sepa_H.replace("VH","V"+sepa+"H")
         
-    # Insert juncture sign after the letters k, m, y, l, and v if they preceed the letter y:
+    # Insert separator sign after the letters k, m, y, l, and v if they preceed the letter y:
     # lowercase
     if uppercase_check:
         v_sepa_h_or_V_sepa_H = V_sepa_H
@@ -1555,7 +1561,7 @@ def animation_demo() -> None:
     L_sepa_Y = Y_sepa_Y.replace("LY","L"+sepa+"Y")
     V_sepa_Y = L_sepa_Y.replace("VY","V"+sepa+"Y")
         
-    # Insert juncture sign after the letter l if they preceed the letter l:
+    # Insert separator sign after the letter l if they preceed the letter l:
     # lowercase
     if uppercase_check:
         v_sepa_y_or_V_sepa_Y = V_sepa_Y
@@ -1565,7 +1571,7 @@ def animation_demo() -> None:
     # UPPERCASE
     L_sepa_L = l_sepa_l.replace("LL","L"+sepa+"L")
         
-    # Insert juncture sign after the letters m and s if they preceed the letter s:
+    # Insert separator sign after the letters m and s if they preceed the letter s:
     # lowercase
     if uppercase_check:
         l_sepa_l_or_L_sepa_L = L_sepa_L
@@ -1577,7 +1583,7 @@ def animation_demo() -> None:
     M_sepa_S = s_sepa_s.replace("MS","M"+sepa+"S")
     S_sepa_S = M_sepa_S.replace("SS","S"+sepa+"S")
         
-    # Insert juncture sign after the letters t, d, y and s if they preceed the letter v:
+    # Insert separator sign after the letters t, d, y and s if they preceed the letter v:
     # lowercase
     if uppercase_check:
         s_sepa_s_or_S_sepa_S = S_sepa_S
@@ -1593,7 +1599,7 @@ def animation_demo() -> None:
     Y_sepa_V = D_sepa_V.replace("VV","Y"+sepa+"V")
     S_sepa_V = Y_sepa_V.replace("SV","S"+sepa+"V")
         
-    # Remove juncture sign; long vocals (ā, ī, ū, e, o) followed by 1st, 3rd and 5th vaggas (unaspirated and nasals, aspirated combinations are unnecessary) double consonants    
+    # Remove separator sign; long vowels (ā, ī, ū, e, o) followed by 1st, 3rd and 5th vaggas (unaspirated and nasals, aspirated combinations are unnecessary) double consonants    
     # lowercase
     if uppercase_check:
         s_sepa_v_or_S_sepa_V = S_sepa_V
@@ -1759,7 +1765,7 @@ def animation_demo() -> None:
     OB_sepa = OP_sepa.replace("O"+sepa+"B"+sepa, "O"+"B"+sepa)
     OM_sepa = OB_sepa.replace("O"+sepa+"M"+sepa, "O"+"M"+sepa)
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by the letter ṃ or ṁ:
+    # Remove separator sign after long vowels (ā, ī, ū, e, o) followed by the letter ṃ or ṁ:
     # lowercase
     if uppercase_check:
         om_sepa_or_OM_sepa = OM_sepa
@@ -1789,7 +1795,7 @@ def animation_demo() -> None:
     EṀ = ŪṀ.replace("E"+sepa+"Ṁ", "E"+"Ṁ")
     OṀ = EṀ.replace("O"+sepa+"Ṁ", "O"+"Ṁ")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by h_m, and s_m
+    # Remove separator sign after long vowels (ā, ī, ū, e, o) followed by h_m, and s_m
     # lowercase
     if uppercase_check:
         oṁ_or_OṀ = OṀ
@@ -1817,7 +1823,7 @@ def animation_demo() -> None:
     ES_sepa_M = ŪS_sepa_M.replace("E"+sepa+"S"+sepa+"M", "E"+"S"+sepa+"M")
     OS_sepa_M = ES_sepa_M.replace("O"+sepa+"S"+sepa+"M", "O"+"S"+sepa+"M")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by ñ_h, ṇ_h, n_h, m_h, y_h, ḷ_h, l_h, v_h
+    # Remove separator sign after long vowels (ā, ī, ū, e, o) followed by ñ_h, ṇ_h, n_h, m_h, y_h, ḷ_h, l_h, v_h
     # lowercase
     if uppercase_check:
         os_sepa_m_or_OS_sepa_M = OS_sepa_M
@@ -1919,7 +1925,7 @@ def animation_demo() -> None:
     EV_sepa_H = ŪV_sepa_H.replace("E"+sepa+"V"+sepa+"H", "E"+"V"+sepa+"H")
     OV_sepa_H = EV_sepa_H.replace("O"+sepa+"V"+sepa+"H", "O"+"V"+sepa+"H")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by k_y, m_y, y_y, l_y, v_y
+    # Remove separator sign after long vowels (ā, ī, ū, e, o) followed by k_y, m_y, y_y, l_y, v_y
     # lowercase
     if uppercase_check:
         ov_sepa_h_or_OV_sepa_H = OV_sepa_H
@@ -1985,7 +1991,7 @@ def animation_demo() -> None:
     EV_sepa_Y = ŪV_sepa_Y.replace("E"+sepa+"V"+sepa+"Y", "E"+"V"+sepa+"Y")
     OV_sepa_Y = EV_sepa_Y.replace("O"+sepa+"V"+sepa+"Y", "O"+"V"+sepa+"Y")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by l_l
+    # Remove separator sign after long vowels (ā, ī, ū, e, o) followed by l_l
     # lowercase
     if uppercase_check:
         ov_sepa_y_or_OV_sepa_Y = OV_sepa_Y
@@ -2004,7 +2010,7 @@ def animation_demo() -> None:
     EL_sepa_L = ŪL_sepa_L.replace("E"+sepa+"L"+sepa+"L", "E"+"L"+sepa+"L")
     OL_sepa_L = EL_sepa_L.replace("O"+sepa+"L"+sepa+"L", "O"+"L"+sepa+"L")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by m_s and s_s
+    # Remove separator sign after long vowels (ā, ī, ū, e, o) followed by m_s and s_s
     # lowercase
     if uppercase_check:
         ol_sepa_l_or_OL_sepa_L = OL_sepa_L
@@ -2034,7 +2040,7 @@ def animation_demo() -> None:
     ES_sepa_S = ŪS_sepa_S.replace("E"+sepa+"S"+sepa+"S", "E"+"S"+sepa+"S")
     OS_sepa_S = ES_sepa_S.replace("O"+sepa+"S"+sepa+"S", "O"+"S"+sepa+"S")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by t_v, d_v, y_v, s_v
+    # Remove separator sign after long vowels (ā, ī, ū, e, o) followed by t_v, d_v, y_v, s_v
     # lowercsae
     if uppercase_check:
         os_sepa_s_or_OS_sepa_S = OS_sepa_S
@@ -2088,7 +2094,7 @@ def animation_demo() -> None:
     ES_sepa_V = ŪS_sepa_V.replace("E"+sepa+"S"+sepa+"V", "E"+"S"+sepa+"V")
     OS_sepa_V = ES_sepa_V.replace("O"+sepa+"S"+sepa+"V", "O"+"S"+sepa+"V")
 
-    # Remove juncture sign; "_" in m_y, v_y, t_v, d_v, and y_v if the syllables begin with a capitalized letter (eg. M_y), preceeded by a space " ", or a line break / enter (char(10)) (in other words, if the word begins with my-)
+    # Remove separator sign; "_" in m_y, v_y, t_v, d_v, and y_v if the syllables begin with a capitalized letter (eg. M_y), preceeded by a space " ", or a line break / enter (char(10)) (in other words, if the word begins with my-)
     #lowercase
     if uppercase_check:
         os_sepa_v_or_OS_sepa_V = OS_sepa_V
@@ -2124,28 +2130,28 @@ def animation_demo() -> None:
     lbreak_D_Y = lbreak_T_Y.replace("\n"+"D"+sepa+"Y", "\n"+"D"+"Y")
     lbreak_Y_Y = lbreak_D_Y.replace("\n"+"Y"+sepa+"Y", "\n"+"Y"+"Y")
 
-    # Remove double juncture signs
-    no_double_junctures = lbreak_y_y.replace(sepa+sepa,sepa)
-    NO_DOUBLE_JUNCTURES = lbreak_Y_Y.replace(sepa+sepa,sepa)
+    # Remove double separator signs
+    no_double_separators = lbreak_y_y.replace(sepa+sepa,sepa)
+    NO_DOUBLE_SEPARATORS = lbreak_Y_Y.replace(sepa+sepa,sepa)
 
 
     # (Optional) Anusvāra / niggahīta standard conversion
     if uppercase_check:
-        no_double_junctures_or_NO_DOUBLE_JUNCTURES = NO_DOUBLE_JUNCTURES
+        no_double_separators_or_NO_DOUBLE_SEPARATORS = NO_DOUBLE_SEPARATORS
     else:
-        no_double_junctures_or_NO_DOUBLE_JUNCTURES = no_double_junctures
+        no_double_separators_or_NO_DOUBLE_SEPARATORS = no_double_separators
     if anusvara_select == "Change to ṃ - IAST (International Alphabet of Sanskrit Transliteration)":
         # lowercase
-        convert_to_ṃ = no_double_junctures_or_NO_DOUBLE_JUNCTURES.replace("ṁ", "ṃ")
+        convert_to_ṃ = no_double_separators_or_NO_DOUBLE_SEPARATORS.replace("ṁ", "ṃ")
         # UPPERCASE
         convert_to_Ṁ_or_Ṃ = convert_to_ṃ.replace("Ṁ", "Ṃ")
     if anusvara_select == "Change to ṁ - ISO 15919: Pāḷi":
         # lowercase
-        convert_to_ṁ = no_double_junctures_or_NO_DOUBLE_JUNCTURES.replace("ṃ", "ṁ")
+        convert_to_ṁ = no_double_separators_or_NO_DOUBLE_SEPARATORS.replace("ṃ", "ṁ")
         # UPPERCASE
         convert_to_Ṁ_or_Ṃ = convert_to_ṁ.replace("Ṃ", "Ṁ")
     else:
-        convert_to_Ṁ_or_Ṃ = no_double_junctures_or_NO_DOUBLE_JUNCTURES
+        convert_to_Ṁ_or_Ṃ = no_double_separators_or_NO_DOUBLE_SEPARATORS
 
     # Fix the position of preposition pauses and junctions signs
 
@@ -2153,119 +2159,9 @@ def animation_demo() -> None:
     sepa_period = sepa_comma.replace(sepa+".","."+sepa)
     sepa_scolon = sepa_period.replace(sepa+";",";"+sepa)
     sepa_colon = sepa_scolon.replace(sepa+":",":"+sepa)
-
-    # (Optional) Continuous reading; Breaks for short open syllables at the end of a phrase/sentence; Insert juncture sign after the short vowels a, i, and u if they preceed a line break, a double space (tab/indentations), a comma, a semi-colon, or a colon:
-    # lowercase
-    a_sepa_lbreak = sepa_colon.replace("a"+"  \n", "a"+sepa+"  \n")
-    i_sepa_lbreak = a_sepa_lbreak.replace("i"+"  \n", "i"+sepa+"  \n")
-    u_sepa_lbreak = i_sepa_lbreak.replace("u"+"  \n", "u"+sepa+"  \n")
-
-    a_sepa_dspace = u_sepa_lbreak.replace("a"+"  ", "a"+sepa+"  ")
-    i_sepa_dspace = a_sepa_dspace.replace("i"+"  ", "i"+sepa+"  ")
-    u_sepa_dspace = i_sepa_dspace.replace("u"+"  ", "u"+sepa+"  ")
-
-    a_comma_sepa = u_sepa_dspace.replace("a"+",", "a"+","+sepa)
-    i_comma_sepa = a_comma_sepa.replace("i"+",", "i"+","+sepa)
-    u_comma_sepa = i_comma_sepa.replace("u"+",", "u"+","+sepa)
-
-    a_sepa_period = u_comma_sepa.replace("a"+".", "a"+"."+sepa)
-    i_sepa_period = a_sepa_period.replace("i"+".", "i"+"."+sepa)
-    u_sepa_period = i_sepa_period.replace("u"+".", "u"+"."+sepa)
-
-    a_sepa_scolon = u_sepa_period.replace("a"+";", "a"+";"+sepa)
-    i_sepa_scolon = a_sepa_scolon.replace("i"+";", "i"+";"+sepa)
-    u_sepa_scolon = i_sepa_scolon.replace("u"+";", "u"+";"+sepa)
-
-    a_sepa_colon = u_sepa_scolon.replace("a"+":","a"+":"+sepa)
-    i_sepa_colon = a_sepa_colon.replace("i"+":","i"+":"+sepa)
-    u_sepa_colon = i_sepa_colon.replace("u"+":","u"+":"+sepa)
-    # UPPERCASE
-    A_sepa_lbreak = u_sepa_colon.replace("A"+"  \n", "A"+sepa+"  \n")
-    I_sepa_lbreak = A_sepa_lbreak.replace("I"+"  \n", "I"+sepa+"  \n")
-    U_sepa_lbreak = I_sepa_lbreak.replace("U"+"  \n", "U"+sepa+"  \n")
-
-    A_sepa_dspace = U_sepa_lbreak.replace("A"+"  ", "A"+sepa+"  ")
-    I_sepa_dspace = A_sepa_dspace.replace("I"+"  ", "I"+sepa+"  ")
-    U_sepa_dspace = I_sepa_dspace.replace("U"+"  ", "U"+sepa+"  ")
-
-    A_comma_sepa = U_sepa_dspace.replace("A"+",", "A"+","+sepa)
-    I_comma_sepa = A_comma_sepa.replace("I"+",", "I"+","+sepa)
-    U_comma_sepa = I_comma_sepa.replace("U"+",", "U"+","+sepa)
-
-    A_sepa_period = U_comma_sepa.replace("A"+".", "A"+"."+sepa)
-    I_sepa_period = A_sepa_period.replace("I"+".", "I"+"."+sepa)
-    U_sepa_period = I_sepa_period.replace("U"+".", "U"+"."+sepa)
-
-    A_sepa_scolon = U_sepa_period.replace("A"+";", "A"+";"+sepa)
-    I_sepa_scolon = A_sepa_scolon.replace("I"+";", "I"+";"+sepa)
-    U_sepa_scolon = I_sepa_scolon.replace("U"+";", "U"+";"+sepa)
-
-    A_sepa_colon = U_sepa_scolon.replace("A"+":","A"+":"+sepa)
-    I_sepa_colon = A_sepa_colon.replace("I"+":","I"+":"+sepa)
-    U_sepa_colon = I_sepa_colon.replace("U"+":","U"+":"+sepa)
-        
-
-    # (Optional) Continuous reading; Breaks for short open syllables at the end of a phrase/sentence; Insert juncture sign after the short vowels a, i, and u if they preceed a line break, a double space (tab/indentations), a comma, a semi-colon, or a colon:
-    # lowercase
-    if uppercase_check:
-        u_sepa_colon_or_U_sepa_colon = U_sepa_colon
-    else:
-        u_sepa_colon_or_U_sepa_colon = u_sepa_colon
-    undo_a_sepa_lbreak = u_sepa_colon_or_U_sepa_colon.replace("a"+sepa+"  \n", "a"+"  \n")
-    undo_i_sepa_lbreak = undo_a_sepa_lbreak.replace("i"+sepa+"  \n", "i"+"  \n")
-    undo_u_sepa_lbreak = undo_i_sepa_lbreak.replace("u"+sepa+"  \n", "u"+"  \n")
-
-    undo_a_sepa_dspace = undo_u_sepa_lbreak.replace("a"+sepa+"  ", "a"+"  ")
-    undo_i_sepa_dspace = undo_a_sepa_dspace.replace("i"+sepa+"  ", "i"+"  ")
-    undo_u_sepa_dspace = undo_i_sepa_dspace.replace("u"+sepa+"  ", "u"+"  ")
-
-    undo_a_comma_sepa = undo_u_sepa_dspace.replace("a"+","+sepa, "a"+",")
-    undo_i_comma_sepa = undo_a_comma_sepa.replace("i"+","+sepa, "i"+",")
-    undo_u_comma_sepa = undo_i_comma_sepa.replace("u"+","+sepa, "u"+",")
-
-    undo_a_sepa_period = undo_u_comma_sepa.replace("a"+"."+sepa, "a"+".")
-    undo_i_sepa_period = undo_a_sepa_period.replace("i"+"."+sepa, "i"+".")
-    undo_u_sepa_period = undo_i_sepa_period.replace("u"+"."+sepa, "u"+".")
-
-    undo_a_sepa_scolon = undo_u_sepa_period.replace("a"+";"+sepa, "a"+";")
-    undo_i_sepa_scolon = undo_a_sepa_scolon.replace("i"+";"+sepa, "i"+";")
-    undo_u_sepa_scolon = undo_i_sepa_scolon.replace("u"+";"+sepa, "u"+";")
-
-    undo_a_sepa_colon = undo_u_sepa_scolon.replace("a"+":"+sepa, "a"+":")
-    undo_i_sepa_colon = undo_a_sepa_colon.replace("i"+":"+sepa, "i"+":")
-    undo_u_sepa_colon = undo_i_sepa_colon.replace("u"+":"+sepa, "u"+":")
-    # UPPERCASE
-    undo_A_sepa_lbreak = undo_u_sepa_colon.replace("A"+sepa+"  \n", "A"+"  \n")
-    undo_I_sepa_lbreak = undo_A_sepa_lbreak.replace("I"+sepa+"  \n", "I"+"  \n")
-    undo_U_sepa_lbreak = undo_I_sepa_lbreak.replace("U"+sepa+"  \n", "U"+"  \n")
-
-    undo_A_sepa_dspace = undo_U_sepa_lbreak.replace("A"+sepa+"  ", "A"+"  ")
-    undo_I_sepa_dspace = undo_A_sepa_dspace.replace("I"+sepa+"  ", "I"+"  ")
-    undo_U_sepa_dspace = undo_I_sepa_dspace.replace("U"+sepa+"  ", "U"+"  ")
-
-    undo_A_comma_sepa = undo_U_sepa_dspace.replace("A"+","+sepa, "A"+",")
-    undo_I_comma_sepa = undo_A_comma_sepa.replace("I"+","+sepa, "I"+",")
-    undo_U_comma_sepa = undo_I_comma_sepa.replace("U"+","+sepa, "U"+",")
-
-    undo_A_sepa_period = undo_U_comma_sepa.replace("A"+"."+sepa, "A"+".")
-    undo_I_sepa_period = undo_A_sepa_period.replace("I"+"."+sepa, "I"+".")
-    undo_U_sepa_period = undo_I_sepa_period.replace("U"+"."+sepa, "U"+".")
-
-    undo_A_sepa_scolon = undo_U_sepa_period.replace("A"+";"+sepa, "A"+";")
-    undo_I_sepa_scolon = undo_A_sepa_scolon.replace("I"+";"+sepa, "I"+";")
-    undo_U_sepa_scolon = undo_I_sepa_scolon.replace("U"+";"+sepa, "U"+";")
-
-    undo_A_sepa_colon = undo_U_sepa_scolon.replace("A"+":"+sepa, "A"+":")
-    undo_I_sepa_colon = undo_A_sepa_colon.replace("I"+":"+sepa, "I"+":")
-    undo_U_sepa_colon = undo_I_sepa_colon.replace("U"+":"+sepa, "U"+":")
-
-
+    
     # (Optional) Medial anusvāra / niggahīta to nasal (gaṃgā → gaṅgā)
-    if continuous_check:
-        u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon = undo_U_sepa_colon
-    else:
-        u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon = u_sepa_colon_or_U_sepa_colon
-    ṃ_to_ṅ_g = u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon.replace("ṃ"+"g", "ṅ"+"g")
+    ṃ_to_ṅ_g = sepa_colon.replace("ṃ"+"g", "ṅ"+"g")
     ṁ_to_ṅ_g = ṃ_to_ṅ_g.replace("ṁ"+"g", "ṅ"+"g")
     Ṃ_to_Ṅ_G = ṁ_to_ṅ_g.replace("Ṃ"+"G", "Ṅ"+"G")
     Ṁ_to_Ṅ_G = Ṃ_to_Ṅ_G.replace("Ṁ"+"G", "Ṅ"+"G")
@@ -2326,7 +2222,7 @@ animation_demo()
 st.divider()
 """
 **How does it work?**  \n
-It works by adding breaks or visual spacers after every _heavy syllable_. The visual spacers act as a temporal punctuation or a juncture sign. You would then read the split text as if the juncture signs were the new spaces.  \n
+It works by adding breaks or visual spacers after every _heavy syllable_. The visual spacers act as a temporal punctuation or a separator sign. You would then read the split text as if the separator signs were the new spaces.  \n
 **What is a _heavy syllable_?**  \n
 Syllables in Pali are classed as heavy or light, and vowels are classed as either short or long. A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra or niggahīta (ṃ). The sign of a long vowel is a dash/macron [¯] placed over it.  \n
 
@@ -2346,8 +2242,8 @@ _**Short vowels:**_ \n
 **Regional Variances**
 
 **Useful Links** \n
-Pāḷi Text Juncture Separator Website \n
-View & download Parittā of the latest version with juncture signs:  \n
+Pāḷi Text Syllable Separator Website \n
+View & download Parittā of the latest version with separator signs:  \n
 Pāḷi Text Syllable Splitter: \n
 Pāḷi IPA pronunciation Generator: \n
 Pāḷi Scripts Converter (Roman, Brahmi, Sinhalese, Khom Thai, Thai, Khmer, and more): \n
