@@ -1872,7 +1872,7 @@ def animation_demo() -> None:
     iṃ = aṃ.replace("i"+sepa+"ṃ", "i"+"ṃ")
     uṃ = iṃ.replace("u"+sepa+"ṃ", "u"+"ṃ")
 
-    aṁ = oṃ.replace("a"+sepa+"ṁ", "a"+"ṁ")
+    aṁ = uṃ.replace("a"+sepa+"ṁ", "a"+"ṁ")
     iṁ = aṁ.replace("i"+sepa+"ṁ", "i"+"ṁ")
     uṁ = iṁ.replace("u"+sepa+"ṁ", "u"+"ṁ")
 
