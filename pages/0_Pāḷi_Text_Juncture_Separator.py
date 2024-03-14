@@ -63,7 +63,7 @@ def animation_demo() -> None:
     def_sepa= " — "
     juncture_placeholder = "Optional"
     custom_sepa = st.sidebar.text_input(label='Customize your own juncture sign:', placeholder=juncture_placeholder)
-    st.sidebar.caption('↳ try _ , - , ^ , / , \ , = , ~ , | , )( , }{ , or ][ ')
+    st.sidebar.caption('↳ try • , _ , - , ^ , / , \ , = , ~ , | , )( , }{ , or ][ ')
     if custom_sepa == '':
         sepa=def_sepa
     else:
@@ -72,7 +72,7 @@ def animation_demo() -> None:
     #Fix line breaks to double whitespaces and line breaks
     fixed_text= insert_text.replace('\n','  \n')
 
-    # Insert juncture sign after long vocals (ā, ī, ū, e, o)
+    # Insert juncture sign after long vowels (ā, ī, ū, e, o)
     # lowercase
     added_V_ā_sepa = fixed_text.replace('ā','ā'+sepa)
     added_V_ī_sepa = added_V_ā_sepa.replace('ī','ī'+sepa)
@@ -1600,7 +1600,7 @@ def animation_demo() -> None:
     Y_sepa_V = D_sepa_V.replace("VV","Y"+sepa+"V")
     S_sepa_V = Y_sepa_V.replace("SV","S"+sepa+"V")
         
-    # Remove juncture sign; long vocals (ā, ī, ū, e, o) followed by 1st, 3rd and 5th vaggas (unaspirated and nasals, aspirated combinations are unnecessary) double consonants    
+    # Remove juncture sign; long vowels (ā, ī, ū, e, o) followed by 1st, 3rd and 5th vaggas (unaspirated and nasals, aspirated combinations are unnecessary) double consonants    
     # lowercase
     if uppercase_check:
         s_sepa_v_or_S_sepa_V = S_sepa_V
@@ -1766,7 +1766,7 @@ def animation_demo() -> None:
     OB_sepa = OP_sepa.replace("O"+sepa+"B"+sepa, "O"+"B"+sepa)
     OM_sepa = OB_sepa.replace("O"+sepa+"M"+sepa, "O"+"M"+sepa)
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by the letter ṃ or ṁ:
+    # Remove juncture sign after long vowels (ā, ī, ū, e, o) followed by the letter ṃ or ṁ:
     # lowercase
     if uppercase_check:
         om_sepa_or_OM_sepa = OM_sepa
@@ -1796,7 +1796,7 @@ def animation_demo() -> None:
     EṀ = ŪṀ.replace("E"+sepa+"Ṁ", "E"+"Ṁ")
     OṀ = EṀ.replace("O"+sepa+"Ṁ", "O"+"Ṁ")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by h_m, and s_m
+    # Remove juncture sign after long vowels (ā, ī, ū, e, o) followed by h_m, and s_m
     # lowercase
     if uppercase_check:
         oṁ_or_OṀ = OṀ
@@ -1824,7 +1824,7 @@ def animation_demo() -> None:
     ES_sepa_M = ŪS_sepa_M.replace("E"+sepa+"S"+sepa+"M", "E"+"S"+sepa+"M")
     OS_sepa_M = ES_sepa_M.replace("O"+sepa+"S"+sepa+"M", "O"+"S"+sepa+"M")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by ñ_h, ṇ_h, n_h, m_h, y_h, ḷ_h, l_h, v_h
+    # Remove juncture sign after long vowels (ā, ī, ū, e, o) followed by ñ_h, ṇ_h, n_h, m_h, y_h, ḷ_h, l_h, v_h
     # lowercase
     if uppercase_check:
         os_sepa_m_or_OS_sepa_M = OS_sepa_M
@@ -1926,7 +1926,7 @@ def animation_demo() -> None:
     EV_sepa_H = ŪV_sepa_H.replace("E"+sepa+"V"+sepa+"H", "E"+"V"+sepa+"H")
     OV_sepa_H = EV_sepa_H.replace("O"+sepa+"V"+sepa+"H", "O"+"V"+sepa+"H")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by k_y, m_y, y_y, l_y, v_y
+    # Remove juncture sign after long vowels (ā, ī, ū, e, o) followed by k_y, m_y, y_y, l_y, v_y
     # lowercase
     if uppercase_check:
         ov_sepa_h_or_OV_sepa_H = OV_sepa_H
@@ -1992,7 +1992,7 @@ def animation_demo() -> None:
     EV_sepa_Y = ŪV_sepa_Y.replace("E"+sepa+"V"+sepa+"Y", "E"+"V"+sepa+"Y")
     OV_sepa_Y = EV_sepa_Y.replace("O"+sepa+"V"+sepa+"Y", "O"+"V"+sepa+"Y")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by l_l
+    # Remove juncture sign after long vowels (ā, ī, ū, e, o) followed by l_l
     # lowercase
     if uppercase_check:
         ov_sepa_y_or_OV_sepa_Y = OV_sepa_Y
@@ -2011,7 +2011,7 @@ def animation_demo() -> None:
     EL_sepa_L = ŪL_sepa_L.replace("E"+sepa+"L"+sepa+"L", "E"+"L"+sepa+"L")
     OL_sepa_L = EL_sepa_L.replace("O"+sepa+"L"+sepa+"L", "O"+"L"+sepa+"L")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by m_s and s_s
+    # Remove juncture sign after long vowels (ā, ī, ū, e, o) followed by m_s and s_s
     # lowercase
     if uppercase_check:
         ol_sepa_l_or_OL_sepa_L = OL_sepa_L
@@ -2041,7 +2041,7 @@ def animation_demo() -> None:
     ES_sepa_S = ŪS_sepa_S.replace("E"+sepa+"S"+sepa+"S", "E"+"S"+sepa+"S")
     OS_sepa_S = ES_sepa_S.replace("O"+sepa+"S"+sepa+"S", "O"+"S"+sepa+"S")
 
-    # Remove juncture sign after long vocals (ā, ī, ū, e, o) followed by t_v, d_v, y_v, s_v
+    # Remove juncture sign after long vowels (ā, ī, ū, e, o) followed by t_v, d_v, y_v, s_v
     # lowercsae
     if uppercase_check:
         os_sepa_s_or_OS_sepa_S = OS_sepa_S
