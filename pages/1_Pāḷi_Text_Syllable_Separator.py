@@ -2120,7 +2120,27 @@ def animation_demo() -> None:
         ov_sepa_h_or_OV_sepa_H = OV_sepa_H
     else:
         ov_sepa_h_or_OV_sepa_H = ov_sepa_h
-    āk_sepa_y = ov_sepa_h_or_OV_sepa_H.replace("ā"+sepa+"k"+sepa+"y", "ā"+"k"+sepa+"y")
+    ak_sepa_y = ov_sepa_h_or_OV_sepa_H.replace("a"+sepa+"k"+sepa+"y", "a"+"k"+sepa+"y")
+    ik_sepa_y = ak_sepa_y.replace("i"+sepa+"k"+sepa+"y", "i"+"k"+sepa+"y")
+    uk_sepa_y = ik_sepa_y.replace("u"+sepa+"k"+sepa+"y", "u"+"k"+sepa+"y")
+
+    am_sepa_y = uk_sepa_y.replace("a"+sepa+"m"+sepa+"y", "a"+"m"+sepa+"y")
+    im_sepa_y = am_sepa_y.replace("i"+sepa+"m"+sepa+"y", "i"+"m"+sepa+"y")
+    um_sepa_y = im_sepa_y.replace("u"+sepa+"m"+sepa+"y", "u"+"m"+sepa+"y")
+
+    ay_sepa_y = um_sepa_y.replace("a"+sepa+"y"+sepa+"y", "a"+"y"+sepa+"y")
+    iy_sepa_y = ay_sepa_y.replace("i"+sepa+"y"+sepa+"y", "i"+"y"+sepa+"y")
+    uy_sepa_y = iy_sepa_y.replace("u"+sepa+"y"+sepa+"y", "u"+"y"+sepa+"y")
+
+    al_sepa_y = uy_sepa_y.replace("a"+sepa+"l"+sepa+"y", "a"+"l"+sepa+"y")
+    il_sepa_y = al_sepa_y.replace("i"+sepa+"l"+sepa+"y", "i"+"l"+sepa+"y")
+    ul_sepa_y = il_sepa_y.replace("u"+sepa+"l"+sepa+"y", "u"+"l"+sepa+"y")
+
+    av_sepa_y = ul_sepa_y.replace("a"+sepa+"v"+sepa+"y", "a"+"v"+sepa+"y")
+    iv_sepa_y = av_sepa_y.replace("i"+sepa+"v"+sepa+"y", "i"+"v"+sepa+"y")
+    uv_sepa_y = iv_sepa_y.replace("u"+sepa+"v"+sepa+"y", "u"+"v"+sepa+"y")
+
+    āk_sepa_y = uv_sepa_y.replace("ā"+sepa+"k"+sepa+"y", "ā"+"k"+sepa+"y")
     īk_sepa_y = āk_sepa_y.replace("ī"+sepa+"k"+sepa+"y", "ī"+"k"+sepa+"y")
     ūk_sepa_y = īk_sepa_y.replace("ū"+sepa+"k"+sepa+"y", "ū"+"k"+sepa+"y")
     ek_sepa_y = ūk_sepa_y.replace("e"+sepa+"k"+sepa+"y", "e"+"k"+sepa+"y")
@@ -2150,7 +2170,27 @@ def animation_demo() -> None:
     ev_sepa_y = ūv_sepa_y.replace("e"+sepa+"v"+sepa+"y", "e"+"v"+sepa+"y")
     ov_sepa_y = ev_sepa_y.replace("o"+sepa+"v"+sepa+"y", "o"+"v"+sepa+"y")
     # UPPERCASE
-    ĀK_sepa_Y = OV_sepa_H.replace("Ā"+sepa+"K"+sepa+"Y", "Ā"+"K"+sepa+"Y")
+    AK_sepa_Y = ov_sepa_y.replace("A"+sepa+"K"+sepa+"Y", "A"+"K"+sepa+"Y")
+    IK_sepa_Y = AK_sepa_Y.replace("I"+sepa+"K"+sepa+"Y", "I"+"K"+sepa+"Y")
+    UK_sepa_Y = IK_sepa_Y.replace("U"+sepa+"K"+sepa+"Y", "U"+"K"+sepa+"Y")
+
+    AM_sepa_Y = UK_sepa_Y.replace("A"+sepa+"M"+sepa+"Y", "A"+"M"+sepa+"Y")
+    IM_sepa_Y = AM_sepa_Y.replace("I"+sepa+"M"+sepa+"Y", "I"+"M"+sepa+"Y")
+    UM_sepa_Y = IM_sepa_Y.replace("U"+sepa+"M"+sepa+"Y", "U"+"M"+sepa+"Y")
+
+    AY_sepa_Y = UM_sepa_Y.replace("A"+"Y"+sepa+"Y", "A"+"Y"+sepa+"Y")
+    IY_sepa_Y = AY_sepa_Y.replace("I"+"Y"+sepa+"Y", "I"+"Y"+sepa+"Y")
+    UY_sepa_Y = IY_sepa_Y.replace("U"+"Y"+sepa+"Y", "U"+"Y"+sepa+"Y")
+
+    AL_sepa_Y = UY_sepa_Y.replace("A"+sepa+"L"+sepa+"Y", "A"+"L"+sepa+"Y")
+    IL_sepa_Y = AL_sepa_Y.replace("I"+sepa+"L"+sepa+"Y", "I"+"L"+sepa+"Y")
+    UL_sepa_Y = IL_sepa_Y.replace("U"+sepa+"L"+sepa+"Y", "U"+"L"+sepa+"Y")
+
+    AV_sepa_Y = UL_sepa_Y.replace("A"+sepa+"V"+sepa+"Y", "A"+"V"+sepa+"Y")
+    IV_sepa_Y = AV_sepa_Y.replace("I"+sepa+"V"+sepa+"Y", "I"+"V"+sepa+"Y")
+    UV_sepa_Y = IV_sepa_Y.replace("U"+sepa+"V"+sepa+"Y", "U"+"V"+sepa+"Y")
+
+    ĀK_sepa_Y = UV_sepa_Y.replace("Ā"+sepa+"K"+sepa+"Y", "Ā"+"K"+sepa+"Y")
     ĪK_sepa_Y = ĀK_sepa_Y.replace("Ī"+sepa+"K"+sepa+"Y", "Ī"+"K"+sepa+"Y")
     ŪK_sepa_Y = ĪK_sepa_Y.replace("Ū"+sepa+"K"+sepa+"Y", "Ū"+"K"+sepa+"Y")
     EK_sepa_Y = ŪK_sepa_Y.replace("E"+sepa+"K"+sepa+"Y", "E"+"K"+sepa+"Y")
@@ -2186,14 +2226,20 @@ def animation_demo() -> None:
         ov_sepa_y_or_OV_sepa_Y = OV_sepa_Y
     else:
         ov_sepa_y_or_OV_sepa_Y = ov_sepa_y
-    āl_sepa_l = ov_sepa_y_or_OV_sepa_Y.replace("ā"+sepa+"l"+sepa+"l", "ā"+"l"+sepa+"l")
+    al_sepa_l = ov_sepa_y_or_OV_sepa_Y.replace("a"+sepa+"l"+sepa+"l", "a"+"l"+sepa+"l")
+    il_sepa_l = al_sepa_l.replace("i"+sepa+"l"+sepa+"l", "i"+"l"+sepa+"l")
+    ul_sepa_l = il_sepa_l.replace("u"+sepa+"l"+sepa+"l", "u"+"l"+sepa+"l")
+    āl_sepa_l = ul_sepa_l.replace("ā"+sepa+"l"+sepa+"l", "ā"+"l"+sepa+"l")
     īl_sepa_l = āl_sepa_l.replace("ī"+sepa+"l"+sepa+"l", "ī"+"l"+sepa+"l")
     ūl_sepa_l = īl_sepa_l.replace("ū"+sepa+"l"+sepa+"l", "ū"+"l"+sepa+"l")
     el_sepa_l = ūl_sepa_l.replace("e"+sepa+"l"+sepa+"l", "e"+"l"+sepa+"l")
     ol_sepa_l = el_sepa_l.replace("o"+sepa+"l"+sepa+"l", "o"+"l"+sepa+"l")
 
     # UPPERCASE
-    ĀL_sepa_L = ol_sepa_l.replace("Ā"+sepa+"L"+sepa+"L", "Ā"+"L"+sepa+"L")
+    AL_sepa_L = ol_sepa_l.replace("A"+sepa+"L"+sepa+"L", "A"+"L"+sepa+"L")
+    IL_sepa_L = AL_sepa_L.replace("I"+sepa+"L"+sepa+"L", "I"+"L"+sepa+"L")
+    UL_sepa_L = IL_sepa_L.replace("U"+sepa+"L"+sepa+"L", "U"+"L"+sepa+"L")
+    ĀL_sepa_L = UL_sepa_L.replace("Ā"+sepa+"L"+sepa+"L", "Ā"+"L"+sepa+"L")
     ĪL_sepa_L = ĀL_sepa_L.replace("Ī"+sepa+"L"+sepa+"L", "Ī"+"L"+sepa+"L")
     ŪL_sepa_L = ĪL_sepa_L.replace("Ū"+sepa+"L"+sepa+"L", "Ū"+"L"+sepa+"L")
     EL_sepa_L = ŪL_sepa_L.replace("E"+sepa+"L"+sepa+"L", "E"+"L"+sepa+"L")
@@ -2205,7 +2251,15 @@ def animation_demo() -> None:
         ol_sepa_l_or_OL_sepa_L = OL_sepa_L
     else:
         ol_sepa_l_or_OL_sepa_L = ol_sepa_l
-    ām_sepa_s = ol_sepa_l_or_OL_sepa_L.replace("ā"+sepa+"m"+sepa+"s", "ā"+"m"+sepa+"s")
+    am_sepa_s = ol_sepa_l_or_OL_sepa_L.replace("a"+sepa+"m"+sepa+"s", "a"+"m"+sepa+"s")
+    im_sepa_s = am_sepa_s.replace("i"+sepa+"m"+sepa+"s", "i"+"m"+sepa+"s")
+    um_sepa_s = im_sepa_s.replace("u"+sepa+"m"+sepa+"s", "u"+"m"+sepa+"s")
+
+    as_sepa_s = um_sepa_s.replace("a"+sepa+"s"+sepa+"s", "a"+"s"+sepa+"s")
+    is_sepa_s = as_sepa_s.replace("i"+sepa+"s"+sepa+"s", "i"+"s"+sepa+"s")
+    us_sepa_s = is_sepa_s.replace("u"+sepa+"s"+sepa+"s", "u"+"s"+sepa+"s")
+
+    ām_sepa_s = us_sepa_s.replace("ā"+sepa+"m"+sepa+"s", "ā"+"m"+sepa+"s")
     īm_sepa_s = ām_sepa_s.replace("ī"+sepa+"m"+sepa+"s", "ī"+"m"+sepa+"s")
     ūm_sepa_s = īm_sepa_s.replace("ū"+sepa+"m"+sepa+"s", "ū"+"m"+sepa+"s")
     em_sepa_s = ūm_sepa_s.replace("e"+sepa+"m"+sepa+"s", "e"+"m"+sepa+"s")
@@ -2217,7 +2271,15 @@ def animation_demo() -> None:
     es_sepa_s = ūs_sepa_s.replace("e"+sepa+"s"+sepa+"s", "e"+"s"+sepa+"s")
     os_sepa_s = es_sepa_s.replace("o"+sepa+"s"+sepa+"s", "o"+"s"+sepa+"s")
     # UPPERCASE
-    ĀM_sepa_S = os_sepa_s.replace("Ā"+sepa+"M"+sepa+"S", "Ā"+"M"+sepa+"S")
+    AM_sepa_S = os_sepa_s.replace("A"+sepa+"M"+sepa+"S", "A"+"M"+sepa+"S")
+    IM_sepa_S = AM_sepa_S.replace("I"+sepa+"M"+sepa+"S", "I"+"M"+sepa+"S")
+    UM_sepa_S = IM_sepa_S.replace("U"+sepa+"M"+sepa+"S", "U"+"M"+sepa+"S")
+
+    AS_sepa_S = UM_sepa_S.replace("A"+sepa+"S"+sepa+"S", "A"+"S"+sepa+"S")
+    IS_sepa_S = AS_sepa_S.replace("I"+sepa+"S"+sepa+"S", "I"+"S"+sepa+"S")
+    US_sepa_S = IS_sepa_S.replace("U"+sepa+"S"+sepa+"S", "U"+"S"+sepa+"S")
+
+    ĀM_sepa_S = US_sepa_S.replace("Ā"+sepa+"M"+sepa+"S", "Ā"+"M"+sepa+"S")
     ĪM_sepa_S = ĀM_sepa_S.replace("Ī"+sepa+"M"+sepa+"S", "Ī"+"M"+sepa+"S")
     ŪM_sepa_S = ĪM_sepa_S.replace("Ū"+sepa+"M"+sepa+"S", "Ū"+"M"+sepa+"S")
     EM_sepa_S = ŪM_sepa_S.replace("E"+sepa+"M"+sepa+"S", "E"+"M"+sepa+"S")
@@ -2235,7 +2297,23 @@ def animation_demo() -> None:
         os_sepa_s_or_OS_sepa_S = OS_sepa_S
     else:
         os_sepa_s_or_OS_sepa_S = os_sepa_s
-    āt_sepa_v = os_sepa_s_or_OS_sepa_S.replace("ā"+sepa+"t"+sepa+"v", "ā"+"t"+sepa+"v")
+    at_sepa_v = os_sepa_s_or_OS_sepa_S.replace("a"+sepa+"t"+sepa+"v", "a"+"t"+sepa+"v")
+    it_sepa_v = at_sepa_v.replace("i"+sepa+"t"+sepa+"v", "i"+"t"+sepa+"v")
+    ut_sepa_v = it_sepa_v.replace("u"+sepa+"t"+sepa+"v", "u"+"t"+sepa+"v")
+
+    ad_sepa_v = ut_sepa_v.replace("a"+sepa+"d"+sepa+"v", "a"+"d"+sepa+"v")
+    id_sepa_v = ad_sepa_v.replace("i"+sepa+"d"+sepa+"v", "i"+"d"+sepa+"v")
+    ud_sepa_v = id_sepa_v.replace("u"+sepa+"d"+sepa+"v", "u"+"d"+sepa+"v")
+
+    ay_sepa_v = ud_sepa_v.replace("a"+sepa+"y"+sepa+"v", "a"+"y"+sepa+"v")
+    iy_sepa_v = ay_sepa_v.replace("i"+sepa+"y"+sepa+"v", "i"+"y"+sepa+"v")
+    uy_sepa_v = iy_sepa_v.replace("u"+sepa+"y"+sepa+"v", "u"+"y"+sepa+"v")
+
+    as_sepa_v = uy_sepa_v.replace("a"+sepa+"s"+sepa+"v", "a"+"s"+sepa+"v")
+    is_sepa_v = as_sepa_v.replace("i"+sepa+"s"+sepa+"v", "i"+"s"+sepa+"v")
+    us_sepa_v = is_sepa_v.replace("u"+sepa+"s"+sepa+"v", "u"+"s"+sepa+"v")
+
+    āt_sepa_v = us_sepa_v.replace("ā"+sepa+"t"+sepa+"v", "ā"+"t"+sepa+"v")
     īt_sepa_v = āt_sepa_v.replace("ī"+sepa+"t"+sepa+"v", "ī"+"t"+sepa+"v")
     ūt_sepa_v = īt_sepa_v.replace("ū"+sepa+"t"+sepa+"v", "ū"+"t"+sepa+"v")
     et_sepa_v = ūt_sepa_v.replace("e"+sepa+"t"+sepa+"v", "e"+"t"+sepa+"v")
@@ -2259,7 +2337,23 @@ def animation_demo() -> None:
     es_sepa_v = ūs_sepa_v.replace("e"+sepa+"s"+sepa+"v", "e"+"s"+sepa+"v")
     os_sepa_v = es_sepa_v.replace("o"+sepa+"s"+sepa+"v", "o"+"s"+sepa+"v")
     # UPPERCASE
-    ĀT_sepa_V = os_sepa_v.replace("Ā"+sepa+"T"+sepa+"V", "Ā"+"T"+sepa+"V")
+    AT_sepa_V = os_sepa_v.replace("A"+sepa+"T"+sepa+"V", "A"+"T"+sepa+"V")
+    IT_sepa_V = AT_sepa_V.replace("I"+sepa+"T"+sepa+"V", "I"+"T"+sepa+"V")
+    UT_sepa_V = IT_sepa_V.replace("U"+sepa+"T"+sepa+"V", "U"+"T"+sepa+"V")
+
+    AD_sepa_V = UT_sepa_V.replace("A"+sepa+"D"+sepa+"V", "A"+"D"+sepa+"V")
+    ID_sepa_V = AD_sepa_V.replace("I"+sepa+"D"+sepa+"V", "I"+"D"+sepa+"V")
+    UD_sepa_V = ID_sepa_V.replace("U"+sepa+"D"+sepa+"V", "U"+"D"+sepa+"V")
+
+    AY_sepa_V = UD_sepa_V.replace("A"+sepa+"Y"+sepa+"V", "A"+"Y"+sepa+"V")
+    IY_sepa_V = AY_sepa_V.replace("I"+sepa+"Y"+sepa+"V", "I"+"Y"+sepa+"V")
+    UY_sepa_V = IY_sepa_V.replace("U"+sepa+"Y"+sepa+"V", "U"+"Y"+sepa+"V")
+
+    AS_sepa_V = UY_sepa_V.replace("A"+sepa+"S"+sepa+"V", "A"+"S"+sepa+"V")
+    IS_sepa_V = AS_sepa_V.replace("I"+sepa+"S"+sepa+"V", "I"+"S"+sepa+"V")
+    US_sepa_V = IS_sepa_V.replace("U"+sepa+"S"+sepa+"V", "U"+"S"+sepa+"V")
+
+    ĀT_sepa_V = US_sepa_V.replace("Ā"+sepa+"T"+sepa+"V", "Ā"+"T"+sepa+"V")
     ĪT_sepa_V = ĀT_sepa_V.replace("Ī"+sepa+"T"+sepa+"V", "Ī"+"T"+sepa+"V")
     ŪT_sepa_V = ĪT_sepa_V.replace("Ū"+sepa+"T"+sepa+"V", "Ū"+"T"+sepa+"V")
     ET_sepa_V = ŪT_sepa_V.replace("E"+sepa+"T"+sepa+"V", "E"+"T"+sepa+"V")
