@@ -47,9 +47,13 @@ def animation_demo() -> None:
     # Split text in UPPERCASE
     uppercase_check = st.sidebar.checkbox(label='Split text in UPPERCASE')
 
-    # Continuous Reading
-    continuous_check = st.sidebar.checkbox(label='Continuous reading')
-    st.sidebar.caption('↳ ignore phrase/line breaks and punctuation pauses: commas, semi-colons, colons, periods')
+    # Saṃyoga - Pauses
+    samyoga_pauses_check = st.sidebar.checkbox(label='Saṃyoga chanting style - Pauses')
+    st.sidebar.caption('↳ no pause at commas, periods, and the end of lines')
+
+    # Saṃyoga - Consonants
+    samyoga_consonants_check = st.sidebar.checkbox(label='Saṃyoga chanting style - Consonants')
+    st.sidebar.caption('↳ no retroflex consonants, b, bh → ph; d, dh → th; g, gh → kh; j, jh →ch; ñ → y')
 
     # Anusvāra/niggahīta standard conversion (ṃ ⇄ ṁ)
     anusvara_select = st.sidebar.selectbox(
@@ -2161,7 +2165,7 @@ def animation_demo() -> None:
     sepa_scolon = sepa_period.replace(sepa+";",";"+sepa)
     sepa_colon = sepa_scolon.replace(sepa+":",":"+sepa)
 
-    # (Optional) Continuous reading; Breaks for short open syllables at the end of a phrase/sentence; Insert juncture sign after the short vowels a, i, and u if they preceed a line break, a double space (tab/indentations), a comma, a semi-colon, or a colon:
+    # (Optional) Saṃyoga Pauses; Breaks for short open syllables at the end of a phrase/sentence; Insert juncture sign after the short vowels a, i, and u if they preceed a line break, a double space (tab/indentations), a comma, a semi-colon, or a colon:
     # lowercase
     a_sepa_lbreak = sepa_colon.replace("a"+"  \n", "a"+sepa+"  \n")
     i_sepa_lbreak = a_sepa_lbreak.replace("i"+"  \n", "i"+sepa+"  \n")
@@ -2212,7 +2216,7 @@ def animation_demo() -> None:
     U_sepa_colon = I_sepa_colon.replace("U"+":","U"+":"+sepa)
         
 
-    # (Optional) Continuous reading; Breaks for short open syllables at the end of a phrase/sentence; Insert juncture sign after the short vowels a, i, and u if they preceed a line break, a double space (tab/indentations), a comma, a semi-colon, or a colon:
+    # (Optional) Saṃyoga Pauses; Breaks for short open syllables at the end of a phrase/sentence; Insert juncture sign after the short vowels a, i, and u if they preceed a line break, a double space (tab/indentations), a comma, a semi-colon, or a colon:
     # lowercase
     if uppercase_check:
         u_sepa_colon_or_U_sepa_colon = U_sepa_colon
@@ -2268,7 +2272,7 @@ def animation_demo() -> None:
 
 
     # (Optional) Medial anusvāra / niggahīta to nasal (gaṃgā → gaṅgā)
-    if continuous_check:
+    if samyoga_pauses_check:
         u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon = undo_U_sepa_colon
     else:
         u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon = u_sepa_colon_or_U_sepa_colon
@@ -2325,8 +2329,20 @@ def animation_demo() -> None:
         NASAL_NG = Ṁ_TO_NG
     else:
         NASAL_NG = nasal_ng
+    
+    # Saṃyoga Consonants
+    if samyoga_consonants_check:
+        samyoga_ṭ = NASAL_NG.replace("ṭ", "t")
+        samyoga_ḍ = samyoga_ṭ.replace("ḍ", "d")
+        samyoga_ṇ = samyoga_ḍ.replace("ṇ", "n")
+        samyoga_Ṭ = samyoga_ṇ.replace("Ṭ", "T")
+        samyoga_Ḍ = samyoga_Ṭ.replace("Ḍ", "D")
+        samyoga_Ṇ = samyoga_Ḍ.replace("Ṇ", "N")
+    else:
+        samyoga_Ṇ = NASAL_NG
 
-    st.write(NASAL_NG)
+
+    st.write(samyoga_Ṇ)
 
 animation_demo()
 
