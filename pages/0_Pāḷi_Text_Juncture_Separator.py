@@ -2338,11 +2338,37 @@ def animation_demo() -> None:
         samyoga_Ṭ = samyoga_ṇ.replace("Ṭ", "T")
         samyoga_Ḍ = samyoga_Ṭ.replace("Ḍ", "D")
         samyoga_Ṇ = samyoga_Ḍ.replace("Ṇ", "N")
+        samyoga_bh = samyoga_Ṇ.replace("bh", "ph")
+        samyoga_b = samyoga_bh.replace("b", "ph")
+        samyoga_dh = samyoga_b.replace("dh", "th")
+        samyoga_d = samyoga_dh.replace("d", "th")
+        samyoga_gh = samyoga_d.replace("gh", "kh")
+        samyoga_g = samyoga_gh.replace("g", "kh")
+        samyoga_jh = samyoga_g.replace("jh", "ch")
+        samyoga_j = samyoga_jh.replace("j", "ch")
+        samyoga_ñ = samyoga_j.replace("ñ", "y")
+        samyoga_Bh = samyoga_ñ.replace("Bh", "Ph")
+        samyoga_B = samyoga_Bh.replace("B", "Ph")
+        samyoga_Dh = samyoga_B.replace("Dh", "Th")
+        samyoga_D = samyoga_Dh.replace("D", "Th")
+        samyoga_Gh = samyoga_D.replace("Gh", "Kh")
+        samyoga_G = samyoga_Gh.replace("G", "Kh")
+        samyoga_Jh = samyoga_G.replace("Jh", "Ch")
+        samyoga_J = samyoga_Jh.replace("J", "Ch")
+        samyoga_Ñ = samyoga_J.replace("Ñ", "Y")
+        samyoga_BH = samyoga_Ñ.replace("BH", "PH")
+        samyoga_DH = samyoga_BH.replace("DH", "TH")
+        samyoga_GH = samyoga_DH.replace("GH", "KH")
+        samyoga_JH = samyoga_GH.replace("JH", "CH")
+        samyoga_bH = samyoga_JH.replace("bH", "pH")
+        samyoga_dH = samyoga_bH.replace("dH", "tH")
+        samyoga_gH = samyoga_dH.replace("gH", "kH")
+        samyoga_jH = samyoga_gH.replace("jH", "cH")
     else:
-        samyoga_Ṇ = NASAL_NG
+        samyoga_jH = NASAL_NG
 
 
-    st.write(samyoga_Ṇ)
+    st.write(samyoga_jH)
 
 animation_demo()
 
