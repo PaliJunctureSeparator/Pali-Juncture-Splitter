@@ -2125,6 +2125,7 @@ def animation_demo() -> None:
     lbreak_d_y = lbreak_t_y.replace("\n"+"d"+sepa+"y", "\n"+"d"+"y")
     lbreak_y_y = lbreak_d_y.replace("\n"+"y"+sepa+"y", "\n"+"y"+"y")
     lbreak_n_h = lbreak_y_y.replace("\n"+"n"+sepa+"h", "\n"+"n"+"h")
+
     # UPPERCASE
     space_M_Y = lbreak_n_h.replace(" "+"M"+sepa+"Y", " "+"M"+"Y")
     space_V_Y = space_M_Y.replace(" "+"V"+sepa+"Y", " "+"V"+"Y")
@@ -2370,10 +2371,18 @@ def animation_demo() -> None:
         samyoga_gH = samyoga_dH.replace("gH", "kH")
         samyoga_jH = samyoga_gH.replace("jH", "cH")
     else:
-        samyoga_jH = NASAL_NG
+        samyoga_jH = NASAL_NG    
+    
+    if insert_text[:2] == "nh":
+        first_nh = samyoga_jH.replace("n"+sepa+"h", "n"+"h", 1)
+    if insert_text[:2] == "nH":
+        first_nh = samyoga_jH.replace("n"+sepa+"H", "n"+"H", 1)
+    if insert_text[:2] == "NH":
+        first_nh = samyoga_jH.replace("N"+sepa+"H", "N"+"H", 1)
+    else:
+        first_nh = samyoga_jH
 
-
-    st.write(samyoga_jH)
+    st.write(first_nh)
 
 animation_demo()
 
