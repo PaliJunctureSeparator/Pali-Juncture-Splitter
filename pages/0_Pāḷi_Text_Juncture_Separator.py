@@ -2099,7 +2099,7 @@ def animation_demo() -> None:
     ES_sepa_V = ŪS_sepa_V.replace("E"+sepa+"S"+sepa+"V", "E"+"S"+sepa+"V")
     OS_sepa_V = ES_sepa_V.replace("O"+sepa+"S"+sepa+"V", "O"+"S"+sepa+"V")
 
-    # Remove juncture sign; "_" in m_y, v_y, t_v, d_v, and y_v if the syllables begin with a capitalized letter (eg. M_y), preceeded by a space " ", or a line break / enter (char(10)) (in other words, if the word begins with my-)
+    # Remove juncture sign; "_" in m_y, v_y, t_v, d_v, y_v, and n_h if the syllables begin with a capitalized letter (eg. M_y), preceeded by a space " ", or a line break / enter (char(10)) (in other words, if the word begins with my-)
     #lowercase
     if uppercase_check:
         os_sepa_v_or_OS_sepa_V = OS_sepa_V
@@ -2110,34 +2110,39 @@ def animation_demo() -> None:
     Ty = Vy.replace("T"+sepa+"y", "T"+"y")
     Dy = Ty.replace("D"+sepa+"y", "D"+"y")
     Yy = Dy.replace("Y"+sepa+"y", "Y"+"y")
+    Nh = Yy.replace("N"+sepa+"h", "N"+"h")
 
-    space_m_y = Yy.replace(" "+"m"+sepa+"y", " "+"m"+"y")
+    space_m_y = Nh.replace(" "+"m"+sepa+"y", " "+"m"+"y")
     space_v_y = space_m_y.replace(" "+"v"+sepa+"y", " "+"v"+"y")
     space_t_y = space_v_y.replace(" "+"t"+sepa+"y", " "+"t"+"y")
     space_d_y = space_t_y.replace(" "+"d"+sepa+"y", " "+"d"+"y")
     space_y_y = space_d_y.replace(" "+"y"+sepa+"y", " "+"y"+"y")
+    space_n_h = space_y_y.replace(" "+"n"+sepa+"h", " "+"n"+"h")
 
-    lbreak_m_y = space_y_y.replace("\n"+"m"+sepa+"y", "\n"+"m"+"y")
+    lbreak_m_y = space_n_h.replace("\n"+"m"+sepa+"y", "\n"+"m"+"y")
     lbreak_v_y = lbreak_m_y.replace("\n"+"v"+sepa+"y", "\n"+"v"+"y")
     lbreak_t_y = lbreak_v_y.replace("\n"+"t"+sepa+"y", "\n"+"t"+"y")
     lbreak_d_y = lbreak_t_y.replace("\n"+"d"+sepa+"y", "\n"+"d"+"y")
     lbreak_y_y = lbreak_d_y.replace("\n"+"y"+sepa+"y", "\n"+"y"+"y")
+    lbreak_n_h = lbreak_y_y.replace("\n"+"n"+sepa+"h", "\n"+"n"+"h")
     # UPPERCASE
-    space_M_Y = lbreak_y_y.replace(" "+"M"+sepa+"Y", " "+"M"+"Y")
+    space_M_Y = lbreak_n_h.replace(" "+"M"+sepa+"Y", " "+"M"+"Y")
     space_V_Y = space_M_Y.replace(" "+"V"+sepa+"Y", " "+"V"+"Y")
     space_T_Y = space_V_Y.replace(" "+"T"+sepa+"Y", " "+"T"+"Y")
     space_D_Y = space_T_Y.replace(" "+"D"+sepa+"Y", " "+"D"+"Y")
     space_Y_Y = space_D_Y.replace(" "+"Y"+sepa+"Y", " "+"Y"+"Y")
+    space_N_H = space_Y_Y.replace(" "+"N"+sepa+"H", " "+"N"+"H")
 
-    lbreak_M_Y = space_Y_Y.replace("\n"+"M"+sepa+"Y", "\n"+"M"+"Y")
+    lbreak_M_Y = space_N_H.replace("\n"+"M"+sepa+"Y", "\n"+"M"+"Y")
     lbreak_V_Y = lbreak_M_Y.replace("\n"+"V"+sepa+"Y", "\n"+"V"+"Y")
     lbreak_T_Y = lbreak_V_Y.replace("\n"+"T"+sepa+"Y", "\n"+"T"+"Y")
     lbreak_D_Y = lbreak_T_Y.replace("\n"+"D"+sepa+"Y", "\n"+"D"+"Y")
     lbreak_Y_Y = lbreak_D_Y.replace("\n"+"Y"+sepa+"Y", "\n"+"Y"+"Y")
+    lbreak_N_H = lbreak_Y_Y.replace("\n"+"N"+sepa+"H", "\n"+"N"+"H")
 
     # Remove double juncture signs
-    no_double_junctures = lbreak_y_y.replace(sepa+sepa,sepa)
-    NO_DOUBLE_JUNCTURES = lbreak_Y_Y.replace(sepa+sepa,sepa)
+    no_double_junctures = lbreak_n_h.replace(sepa+sepa,sepa)
+    NO_DOUBLE_JUNCTURES = lbreak_N_H.replace(sepa+sepa,sepa)
 
 
     # (Optional) Anusvāra / niggahīta standard conversion
