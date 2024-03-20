@@ -2111,27 +2111,88 @@ def animation_demo() -> None:
     ES_sepa_V = ŪS_sepa_V.replace("E"+sepa+"S"+sepa+"V", "E"+"S"+sepa+"V")
     OS_sepa_V = ES_sepa_V.replace("O"+sepa+"S"+sepa+"V", "O"+"S"+sepa+"V")
 
-    # Remove juncture sign; "_" in m_y, v_y, t_v, d_v, y_v, and n_h if the syllables begin with a capitalized letter (eg. M_y), preceeded by a space " ", or a line break / enter (char(10)) (in other words, if the word begins with my-)
+    # Remove juncture sign; "_" in certain double consonants if the syllables begin with a capitalized letter, preceeded by a space " ", or a line break / enter (char(10)
     #lowercase
     if uppercase_check:
         os_sepa_v_or_OS_sepa_V = OS_sepa_V
     else:
         os_sepa_v_or_OS_sepa_V = os_sepa_v
-    My = os_sepa_v_or_OS_sepa_V.replace("M"+sepa+"y", "M"+"y")
-    Vy = My.replace("V"+sepa+"y", "V"+"y")
+    Hm = os_sepa_v_or_OS_sepa_V.replace("H"+sepa+"m", "H"+"m")
+    Sm = Hm.replace("S"+sepa+"m", "S"+"m")
+    Ñh = Sm.replace("Ñ"+sepa+"h", "Ñ"+"h")
+    Ṇh = Ñh.replace("Ṇ"+sepa+"h", "Ṇ"+"h")
+    Nh = Ṇh.replace("N"+sepa+"h", "N"+"h")
+    Mh = Nh.replace("M"+sepa+"h", "M"+"h")
+    Yh = Mh.replace("Y"+sepa+"h", "Y"+"h")
+    Ḷh = Yh.replace("Ḷ"+sepa+"h", "Ḷ"+"h")
+    Lh = Ḷh.replace("L"+sepa+"h", "L"+"h")
+    Vh = Lh.replace("V"+sepa+"h", "V"+"h")
+
+
+    Ky = Vh.replace("K"+sepa+"y", "K"+"y")
+    My = Ky.replace("M"+sepa+"y", "M"+"y")
+    Yy = My.replace("Y"+sepa+"y", "Y"+"y")
+    Ly = Yy.replace("L"+sepa+"y", "L"+"y")
+    Vy = Ly.replace("V"+sepa+"y", "V"+"y")
     Ty = Vy.replace("T"+sepa+"y", "T"+"y")
     Dy = Ty.replace("D"+sepa+"y", "D"+"y")
-    Yy = Dy.replace("Y"+sepa+"y", "Y"+"y")
-    Nh = Yy.replace("N"+sepa+"h", "N"+"h")
 
-    space_m_y = Nh.replace(" "+"m"+sepa+"y", " "+"m"+"y")
-    space_v_y = space_m_y.replace(" "+"v"+sepa+"y", " "+"v"+"y")
+    Ll = Dy.replace("L"+sepa+"l", "L"+"l")
+
+    Ms = Ll.replace("M"+sepa+"s", "M"+"s")
+    Ss = Ms.replace("S"+sepa+"s", "S"+"s")
+
+    Tv = Ss.replace("T"+sepa+"v", "T"+"v")
+    Dv = Tv.replace("D"+sepa+"v", "D"+"v")
+    Yv = Dv.replace("Y"+sepa+"v", "Y"+"v")
+    Sv = Yv.replace("S"+sepa+"v", "S"+"v")
+
+
+    space_h_m = Sv.replace(" "+"h"+sepa+"m", " "+"h"+"m")
+    space_s_m = space_h_m.replace(" "+"s"+sepa+"m", " "+"s"+"m")
+
+    space_ñ_h = space_s_m.replace(" "+"ñ"+sepa+"h", " "+"ñ"+"h")
+    space_ṇ_h = space_ñ_h.replace(" "+"ṇ"+sepa+"h", " "+"ṇ"+"h")
+    space_n_h = space_ṇ_h.replace(" "+"n"+sepa+"h", " "+"n"+"h")
+    space_m_h = space_n_h.replace(" "+"m"+sepa+"h", " "+"m"+"h")
+    space_y_h = space_m_h.replace(" "+"y"+sepa+"h", " "+"y"+"h")
+    space_ḷ_h = space_y_h.replace(" "+"ḷ"+sepa+"h", " "+"ḷ"+"h")
+    space_l_h = space_ḷ_h.replace(" "+"l"+sepa+"h", " "+"l"+"h")
+    space_v_h = space_l_h.replace(" "+"v"+sepa+"h", " "+"v"+"h")
+    
+    space_k_y = space_v_h.replace(" "+"k"+sepa+"y", " "+"k"+"y")
+    space_m_y = space_k_y.replace(" "+"m"+sepa+"y", " "+"m"+"y")
+    space_y_y = space_m_y.replace(" "+"y"+sepa+"y", " "+"y"+"y")
+    space_l_y = space_y_y.replace(" "+"l"+sepa+"y", " "+"l"+"y")
+    space_v_y = space_l_y.replace(" "+"v"+sepa+"y", " "+"v"+"y")
     space_t_y = space_v_y.replace(" "+"t"+sepa+"y", " "+"t"+"y")
     space_d_y = space_t_y.replace(" "+"d"+sepa+"y", " "+"d"+"y")
-    space_y_y = space_d_y.replace(" "+"y"+sepa+"y", " "+"y"+"y")
-    space_n_h = space_y_y.replace(" "+"n"+sepa+"h", " "+"n"+"h")
 
-    lbreak_m_y = space_n_h.replace("\n"+"m"+sepa+"y", "\n"+"m"+"y")
+    space_l_l = space_d_y.replace(" "+"l"+sepa+"l", " "+"l"+"l")
+
+    space_m_s = space_l_l.replace(" "+"m"+sepa+"s", " "+"m"+"s")
+    space_s_s = space_m_s.replace(" "+"s"+sepa+"s", " "+"s"+"s")
+
+    space_t_v = space_s_s.replace(" "+"t"+sepa+"v", " "+"t"+"v")
+    space_d_v = space_t_v.replace(" "+"d"+sepa+"v", " "+"d"+"v")
+    space_y_v = space_d_v.replace(" "+"y"+sepa+"v", " "+"y"+"v")
+    space_s_v = space_y_v.replace(" "+"s"+sepa+"v", " "+"s"+"v")
+
+    lbreak_h_m = space_s_v.replace("\n"+"h"+sepa+"m", "\n"+"h"+"m")
+    lbreak_s_m = lbreak_h_m.replace("\n"+"s"+sepa+"m", "\n"+"s"+"m")
+    
+    lbreak_ñ_h = lbreak_s_m.replace("\n"+"ñ"+sepa+"h", "\n"+"ñ"+"h")
+    lbreak_ṇ_h = lbreak_ñ_h.replace("\n"+"ṇ"+sepa+"h", "\n"+"ṇ"+"h")
+    lbreak_n_h = lbreak_ṇ_h.replace("\n"+"n"+sepa+"h", "\n"+"n"+"h")
+    lbreak_m_h = lbreak_n_h.replace("\n"+"m"+sepa+"h", "\n"+"m"+"h")
+    lbreak_y_h = lbreak_m_h.replace("\n"+"y"+sepa+"h", "\n"+"y"+"h")
+    lbreak_ḷ_h = lbreak_y_h.replace("\n"+"ḷ"+sepa+"h", "\n"+"ḷ"+"h")
+    lbreak_l_h = lbreak_ḷ_h.replace("\n"+"l"+sepa+"h", "\n"+"l"+"h")
+    lbreak_v_h = lbreak_l_h.replace("\n"+"v"+sepa+"h", "\n"+"v"+"h")
+
+    lbreak_k_y = space_v_h.replace("\n"+"k"+sepa+"y", "\n"+"k"+"y")
+    #CONTINUE HERE
+    lbreak_m_y = lbreak_k_y.replace("\n"+"m"+sepa+"y", "\n"+"m"+"y")
     lbreak_v_y = lbreak_m_y.replace("\n"+"v"+sepa+"y", "\n"+"v"+"y")
     lbreak_t_y = lbreak_v_y.replace("\n"+"t"+sepa+"y", "\n"+"t"+"y")
     lbreak_d_y = lbreak_t_y.replace("\n"+"d"+sepa+"y", "\n"+"d"+"y")
