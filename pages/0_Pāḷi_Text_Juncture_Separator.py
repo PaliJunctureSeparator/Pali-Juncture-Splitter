@@ -2375,34 +2375,36 @@ def animation_demo() -> None:
     
     if insert_text[:2] == "nh":
         first_letters = samyoga_jH.replace("n"+sepa+"h", "n"+"h", 1)
-        if insert_text[:2] == "nH":
-            first_letters = samyoga_jH.replace("n"+sepa+"H", "n"+"H", 1)
-            if insert_text[:2] == "NH":
-                first_letters = samyoga_jH.replace("N"+sepa+"H", "N"+"H", 1)
-                if insert_text[:2] == "my":
-                    first_letters = samyoga_jH.replace("m"+sepa+"y", "m"+"y", 1)
-                    if insert_text[:2] == "mY":
-                        first_letters = samyoga_jH.replace("m"+sepa+"Y", "m"+"Y", 1)
-                        if insert_text[:2] == "MY":
-                            first_letters = samyoga_jH.replace("M"+sepa+"Y", "M"+"Y", 1)
-                            if insert_text[:2] == "vy":
-                                first_letters = samyoga_jH.replace("v"+sepa+"y", "v"+"y", 1)
-                                if insert_text[:2] == "vY":
-                                    first_letters = samyoga_jH.replace("v"+sepa+"Y", "v"+"Y", 1)
-                                    if insert_text[:2] == "VY":
-                                        first_letters = samyoga_jH.replace("V"+sepa+"Y", "V"+"Y", 1)
-                                        if insert_text[:2] == "dy":
-                                            first_letters = samyoga_jH.replace("d"+sepa+"y", "d"+"y", 1)
-                                            if insert_text[:2] == "dY":
-                                                first_letters = samyoga_jH.replace("d"+sepa+"Y", "d"+"Y", 1)
-                                                if insert_text[:2] == "DY":
-                                                    first_letters = samyoga_jH.replace("D"+sepa+"Y", "D"+"Y", 1)
-                                                    if insert_text[:2] == "yy":
-                                                        first_letters = samyoga_jH.replace("y"+sepa+"y", "y"+"y", 1)
-                                                        if insert_text[:2] == "yY":
-                                                            first_letters = samyoga_jH.replace("y"+sepa+"Y", "y"+"Y", 1)
-                                                            if insert_text[:2] == "YY":
-                                                                first_letters = samyoga_jH.replace("Y"+sepa+"Y", "Y"+"Y", 1)
+    elif insert_text[:2] == "my":
+        first_letters = samyoga_jH.replace("m"+sepa+"y", "m"+"y", 1)
+    elif insert_text[:2] == "mY":
+        first_letters = samyoga_jH.replace("m"+sepa+"Y", "m"+"Y", 1)
+    elif insert_text[:2] == "MY":
+        first_letters = samyoga_jH.replace("M"+sepa+"Y", "M"+"Y", 1)
+    elif insert_text[:2] == "vy":
+        first_letters = samyoga_jH.replace("v"+sepa+"y", "v"+"y", 1)
+    elif insert_text[:2] == "vY":
+        first_letters = samyoga_jH.replace("v"+sepa+"Y", "v"+"Y", 1)
+    elif insert_text[:2] == "VY":
+        first_letters = samyoga_jH.replace("V"+sepa+"Y", "V"+"Y", 1)
+    elif insert_text[:2] == "ty":
+        first_letters = samyoga_jH.replace("t"+sepa+"y", "t"+"y", 1)
+    elif insert_text[:2] == "tY":
+        first_letters = samyoga_jH.replace("t"+sepa+"Y", "t"+"Y", 1)
+    elif insert_text[:2] == "TY":
+        first_letters = samyoga_jH.replace("T"+sepa+"Y", "T"+"Y", 1)
+    elif insert_text[:2] == "dy":
+        first_letters = samyoga_jH.replace("d"+sepa+"y", "d"+"y", 1)
+    elif insert_text[:2] == "dY":
+        first_letters = samyoga_jH.replace("d"+sepa+"Y", "d"+"Y", 1)
+    elif insert_text[:2] == "DY":
+        first_letters = samyoga_jH.replace("D"+sepa+"Y", "D"+"Y", 1)
+    elif insert_text[:2] == "yy":
+        first_letters = samyoga_jH.replace("y"+sepa+"y", "y"+"y", 1)
+    elif insert_text[:2] == "yY":
+        first_letters = samyoga_jH.replace("y"+sepa+"Y", "y"+"Y", 1)
+    elif insert_text[:2] == "YY":
+        first_letters = samyoga_jH.replace("Y"+sepa+"Y", "Y"+"Y", 1)
     else:
         first_letters = samyoga_jH
 
