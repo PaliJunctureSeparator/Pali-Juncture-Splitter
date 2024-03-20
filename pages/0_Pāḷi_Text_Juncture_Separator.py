@@ -1505,22 +1505,22 @@ def animation_demo() -> None:
     # Insert juncture sign after the letter ṁ:
     # lowercase
     if uppercase_check:
-        ṁ_sepa_or_Ṁ_sepa = Ṃ_sepa
+        ṃ_sepa_or_Ṃ_sepa = Ṃ_sepa
     else:
-        ṁ_sepa_or_Ṁ_sepa = ṃ_sepa
-    ṁ_sepa = ṁ_sepa_or_Ṁ_sepa.replace("ṁ","ṁ"+sepa)
+        ṃ_sepa_or_Ṃ_sepa = ṃ_sepa
+    ṁ_sepa = ṃ_sepa_or_Ṃ_sepa.replace("ṁ","ṁ"+sepa)
     # UPPERCASE
     Ṁ_sepa = ṁ_sepa.replace("Ṁ","Ṁ"+sepa)
 
-    # Insert juncture sign after the letter m:
+    # Insert juncture sign after the letter m followed by a space:
     # lowercase
     if uppercase_check:
-        m_sepa_or_M_sepa = Ṁ_sepa
+        ṁ_sepa_or_Ṁ_sepa = Ṁ_sepa
     else:
-        m_sepa_or_M_sepa = ṁ_sepa
-    m_sepa = m_sepa_or_M_sepa.replace("m","m"+sepa)
+        ṁ_sepa_or_Ṁ_sepa = ṁ_sepa
+    m_sepa = ṁ_sepa_or_Ṁ_sepa.replace("m"+" ","m"+sepa)
     # UPPERCASE
-    M_sepa = m_sepa.replace("M","M"+sepa)
+    M_sepa = m_sepa.replace("M"+" ","M"+sepa)
 
     # Insert juncture sign after the letter h and s if they preceed the letter m:
     # lowercase
@@ -1528,7 +1528,7 @@ def animation_demo() -> None:
         m_sepa_or_M_sepa = M_sepa
     else:
         m_sepa_or_M_sepa = m_sepa
-    h_sepa_m = ṁ_sepa_or_Ṁ_sepa.replace("hm","h"+sepa+"m")
+    h_sepa_m = m_sepa_or_M_sepa.replace("hm","h"+sepa+"m")
     s_sepa_m = h_sepa_m.replace("sm","s"+sepa+"m")
     # UPPERCASE
     H_sepa_M = s_sepa_m.replace("HM","H"+sepa+"M")
