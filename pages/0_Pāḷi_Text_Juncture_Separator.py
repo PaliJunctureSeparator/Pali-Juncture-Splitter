@@ -1419,6 +1419,22 @@ def animation_demo() -> None:
     added_V_Ū_sepa = added_V_Ī_sepa.replace('Ū', 'Ū'+sepa)
     added_V_E_sepa = added_V_Ū_sepa.replace('E', 'E'+sepa)
     added_V_O_sepa = added_V_E_sepa.replace('O', 'O'+sepa)
+
+    # Insert juncture sign after the letter m followed by a space:
+    # lowercase
+    if uppercase_check:
+        V_o_or_V_O = added_V_O_sepa
+    else:
+        V_o_or_V_O = O_ho
+    m_sepa = V_o_or_V_O.replace("m"+" ","m"+" "+sepa)
+    # UPPERCASE
+    M_sepa = m_sepa.replace("M"+" ","M"+" "+sepa)
+
+    if uppercase_check:
+        ṁ_sepa_or_Ṁ_sepa = M_sepa
+    else:
+        ṁ_sepa_or_Ṁ_sepa = m_sepa
+
     # Insert juncture sign inbetween 1st, 3rd and 5th  vaggas (unaspirated and nasals, aspirated combinations are unnecessary) double consonants
     # lowercase
     # kk, gg, ṅṅ, ṅk, ṅg,
@@ -1427,11 +1443,7 @@ def animation_demo() -> None:
     # tt, dd, nn, nt, nd
     # pp, bb, mm, mp, mb
 
-    if uppercase_check:
-        V_o_or_V_O = added_V_O_sepa
-    else:
-        V_o_or_V_O = O_ho
-    k_sepa_k = V_o_or_V_O.replace("kk","k"+sepa+"k")
+    k_sepa_k = ṁ_sepa_or_Ṁ_sepa.replace("kk","k"+sepa+"k")
     g_sepa_g = k_sepa_k.replace("gg","g"+sepa+"g")
     ṅ_sepa_ṅ = g_sepa_g.replace("ṅṅ","ṅ"+sepa+"ṅ")
     ṅ_sepa_k = ṅ_sepa_ṅ.replace("ṅk","ṅ"+sepa+"k")
@@ -1512,23 +1524,13 @@ def animation_demo() -> None:
     # UPPERCASE
     Ṁ_sepa = ṁ_sepa.replace("Ṁ","Ṁ"+sepa)
 
-    # Insert juncture sign after the letter m followed by a space:
+    # Insert juncture sign after the letter h and s if they preceed the letter m:
     # lowercase
     if uppercase_check:
         ṁ_sepa_or_Ṁ_sepa = Ṁ_sepa
     else:
         ṁ_sepa_or_Ṁ_sepa = ṁ_sepa
-    m_sepa = ṁ_sepa_or_Ṁ_sepa.replace("m"+" ","m"+" "+sepa)
-    # UPPERCASE
-    M_sepa = m_sepa.replace("M"+" ","M"+" "+sepa)
-
-    # Insert juncture sign after the letter h and s if they preceed the letter m:
-    # lowercase
-    if uppercase_check:
-        m_sepa_or_M_sepa = M_sepa
-    else:
-        m_sepa_or_M_sepa = m_sepa
-    h_sepa_m = m_sepa_or_M_sepa.replace("hm","h"+sepa+"m")
+    h_sepa_m = ṁ_sepa_or_Ṁ_sepa.replace("hm","h"+sepa+"m")
     s_sepa_m = h_sepa_m.replace("sm","s"+sepa+"m")
     # UPPERCASE
     H_sepa_M = s_sepa_m.replace("HM","H"+sepa+"M")
