@@ -1518,9 +1518,9 @@ def animation_demo() -> None:
         ṁ_sepa_or_Ṁ_sepa = Ṁ_sepa
     else:
         ṁ_sepa_or_Ṁ_sepa = ṁ_sepa
-    m_sepa = ṁ_sepa_or_Ṁ_sepa.replace("m"+" ","m"+sepa)
+    m_sepa = ṁ_sepa_or_Ṁ_sepa.replace("m"+" ","m"+" "+sepa)
     # UPPERCASE
-    M_sepa = m_sepa.replace("M"+" ","M"+sepa)
+    M_sepa = m_sepa.replace("M"+" ","M"+" "+sepa)
 
     # Insert juncture sign after the letter h and s if they preceed the letter m:
     # lowercase
@@ -2155,12 +2155,15 @@ def animation_demo() -> None:
     no_double_junctures = lbreak_n_h.replace(sepa+sepa,sepa)
     NO_DOUBLE_JUNCTURES = lbreak_N_H.replace(sepa+sepa,sepa)
 
+    # Remove double juncture signs
+    no_double_junctures2 = no_double_junctures.replace(sepa+sepa,sepa)
+    NO_DOUBLE_JUNCTURES2 = NO_DOUBLE_JUNCTURES.replace(sepa+sepa,sepa)
 
     # (Optional) Anusvāra / niggahīta standard conversion
     if uppercase_check:
-        no_double_junctures_or_NO_DOUBLE_JUNCTURES = NO_DOUBLE_JUNCTURES
+        no_double_junctures_or_NO_DOUBLE_JUNCTURES = NO_DOUBLE_JUNCTURES2
     else:
-        no_double_junctures_or_NO_DOUBLE_JUNCTURES = no_double_junctures
+        no_double_junctures_or_NO_DOUBLE_JUNCTURES = no_double_junctures2
     if anusvara_select == "Change to ṃ - IAST (International Alphabet of Sanskrit Transliteration)":
         # lowercase
         convert_to_ṃ = no_double_junctures_or_NO_DOUBLE_JUNCTURES.replace("ṁ", "ṃ")
