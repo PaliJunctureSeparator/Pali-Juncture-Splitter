@@ -2655,7 +2655,11 @@ def animation_demo() -> None:
     else:
         first_letters = samyoga_jH
 
-    st.write(first_letters)
+    input_lines = insert_text.split('\n')
+    output_lines = first_letters.split('\n')
+    for i in range(len(input_lines)):
+        entry = input_lines[i]+'\n'+'\n'+output_lines[i]+'\n'
+        st.write(entry)    
 
 animation_demo()
 
@@ -2690,6 +2694,13 @@ Pāḷi Scripts Converter (Roman, Brahmi, Sinhalese, Khom Thai, Thai, Khmer, and
 Introduction to Pāḷi (pdf) \n
 Pāḷi Study & Parittā Chanting Forum (Discord) \n
 (YouTube Playlist) Pāḷi Pronunciation Guide \n
+
+**Roadmap**
+Give suggestions form \n
+Copy to clipboard button \n
+Download text \n
+Line by line conversion \n
+Indonesian page \n
 
 **References**
 
