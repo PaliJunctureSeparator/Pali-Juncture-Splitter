@@ -2672,7 +2672,7 @@ _**Long vowels:**_ \n
 or  \n
 [a, i, u] + CC  \n
 
-And likewise, a syllable is light if it contains a short vowel [a, i, u] not followed by a consonant cluster or anusvāra/niggahīta (ṃ).  \n
+And likewise, a syllable is light if it contains a short vowel [a, i, u] not followed by a consonant cluster or an anusvāra/niggahīta (ṃ).  \n
 
 _**Short vowels:**_ \n
 [a, i, u] + Cv  \n
