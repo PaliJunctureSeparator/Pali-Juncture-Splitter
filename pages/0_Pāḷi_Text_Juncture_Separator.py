@@ -2686,7 +2686,7 @@ Pāḷi Text Juncture Separator Website \n
 View & download Parittā of the latest version with juncture signs:  \n
 Pāḷi Text Syllable Splitter: \n
 Pāḷi IPA pronunciation Generator: \n
-Pāḷi Scripts Converter (Roman, Brahmi, Sinhalese, Khom Thai, Thai, Khmer, and more): \n
+Pāḷi Scripts Converter (Roman, Brahmi, Sinhalese, Khom Thai, Thai, Khmer, and more): [Aksharamukha](https://aksharamukha.appspot.com/converter): Indic script converter by Vinodh Rajan\n
 Introduction to Pāḷi (pdf) \n
 Pāḷi Study & Parittā Chanting Forum (Discord) \n
 (YouTube Playlist) Pāḷi Pronunciation Guide \n
@@ -2695,12 +2695,12 @@ Pāḷi Study & Parittā Chanting Forum (Discord) \n
 
 **Keywords:** \n
 Pāḷi Text heavy syllable fragmentizer, syllabification, syllabication, stressed syllable splitter, syllable breaks visualizer, emphasized syllable, closed syllable, open syllable, long vowel, short vowel, double consonant, tempo, duration, pacer, easy chanting
-
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
-
 """
+
+# Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
+# If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
+# forums](https://discuss.streamlit.io).
+
 st.sidebar.divider()
 show_app_code = st.sidebar.checkbox (label='Show app code')
 
