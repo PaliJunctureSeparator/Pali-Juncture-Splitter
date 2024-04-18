@@ -38,11 +38,11 @@ st.markdown("<p style='text-align: center;'>Atho — pi sak — kac — ca suṇ
 
 st.divider()
 """
-**Insert Pāḷi text here:**
+**Start splitting by insert Pāḷi text here:**
 """
 def animation_demo() -> None:
     # Insert Text
-    insert_text = st.text_area('', height=200, placeholder="e.g. \nNamo tassa bhagavato arahato sammāsambuddhassa.")
+    insert_text = st.text_area('', height=200, placeholder="e.g. "Namo tassa bhagavato arahato sammāsambuddhassa."")
 
     # Medial anusvāra/niggahīta to nasal (gaṃgā → gaṅgā)
     nasal_check = st.sidebar.checkbox(label='Medial anusvāra/niggahīta to nasal (gaṃgā → gaṅgā)')
