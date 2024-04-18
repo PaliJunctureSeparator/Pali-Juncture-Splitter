@@ -35,12 +35,7 @@ st.markdown("<p style='text-align: center;'>Yā — nī — dha bhū — tā —
 st.markdown("<p style='text-align: center;'>Bhum — mā — ni vā — yā — ni va an — talik — khe —</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Sab — be — va bhū — tā — sumanā — bhavan — tu —</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Atho — pi sak — kac — ca suṇan — tu bhā — sitaṃ —</p>", unsafe_allow_html=True)
-"""
-Yā — nī — dha bhū — tā — ni samā — gatā — ni —\n
-Bhum — mā — ni vā — yā — ni va an — talik — khe —\n
-Sab — be — va bhū — tā — sumanā — bhavan — tu —\n
-Atho — pi sak — kac — ca suṇan — tu bhā — sitaṃ —\n
-"""
+
 st.divider()
 """
 **Insert Pāḷi text here:**
