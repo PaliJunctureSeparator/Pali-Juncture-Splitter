@@ -28,11 +28,11 @@ The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pā�
 It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instructors who are looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
 \n
 \n
-**As an example, here is a split stanza from Metta Sutta:**\n
-Karanī — yamat — tha kusale — na —\n
-Yan — tam — san — tam — padam — abhisamec — ca —\n
-Sak — ko — ujū — ca sū — jū — ca —\n
-Sū — vaco — cas — sa mudu anatimā — nī —\n
+**For an example, here is a split stanza from Ratana Sutta:**\n
+Yā — nī — dha bhū — tā — ni samā — gatā — ni —\n
+Bhum — mā — ni vā — yā — ni va an — talik — khe —\n
+Sab — be — va bhū — tā — sumanā — bhavan — tu —\n
+Atho — pi sak — kac — ca sunan — tu bhā — sitaṃ —\n
 
 """
 st.divider()
