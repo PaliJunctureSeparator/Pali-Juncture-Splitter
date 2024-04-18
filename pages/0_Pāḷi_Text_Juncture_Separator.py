@@ -2667,12 +2667,12 @@ def animation_demo() -> None:
         first_letters = samyoga_jH
 
 
-
-    input_lines = insert_text.split('\n')
-    output_lines = first_letters.split('\n')
-    for i in range(len(input_lines)):
-        unsplit_OR_split = input_lines[i]+'\n'+'\n'+output_lines[i]+'\n'
-        st.write(unsplit_OR_split)
+    if show_unsplit:
+        input_lines = insert_text.split('\n')
+        output_lines = first_letters.split('\n')
+        for i in range(len(input_lines)):
+            unsplit_OR_split = input_lines[i]+'\n'+'\n'+output_lines[i]+'\n'
+            st.write(unsplit_OR_split)
 
 animation_demo()
 
