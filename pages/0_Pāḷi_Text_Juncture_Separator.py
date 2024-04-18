@@ -7,7 +7,7 @@ import pandas as pd
 
 LOGGER = get_logger(__name__)
 
-st.set_page_config(page_title="Pāḷi Text Juncture Separator", page_icon="🌴")
+st.set_page_config(page_title="Pāḷi Text Juncture Splitter", page_icon="🌴")
 
 # Sidebar
 
@@ -19,12 +19,12 @@ st.sidebar.divider()
 
 st.sidebar.header("Customize your conversion:")
 
-st.markdown("<h1 style='text-align: center;'>Pāḷi Text Juncture Separator 🌴</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Pāḷi Text Juncture Splitter 🌴</h1>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center;'>Read Pāḷi verses fluently.</h5>", unsafe_allow_html=True)
 st.divider()
 """
 **What is it and who is it for?** \n
-The _Pāḷi Text Juncture Separator_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
+The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
 It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instructors looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
 """
 st.divider()
@@ -2423,12 +2423,12 @@ def animation_demo() -> None:
     st.divider()
 
     """
-    **Separated text:**
+    **Split text:**
     """
 
     if insert_text == "":
         st.markdown('''
-        :gray[The separated text will be shown here.]''')
+        :gray[The split text will be shown here.]''')
     if nasal_check:
         u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon_OR_Ṁ_to_Ṅ_sepa_G = Ṁ_to_Ṅ_sepa_G
     else:
@@ -2686,7 +2686,7 @@ _**Short vowels:**_ \n
 **Regional Variances**
 
 **Useful Links** \n
-Pāḷi Text Juncture Separator Website \n
+Pāḷi Text Juncture Splitter Website \n
 View & download Parittā of the latest version with juncture signs:  \n
 Pāḷi Text Syllable Splitter: \n
 Pāḷi IPA pronunciation Generator: \n
@@ -2705,12 +2705,8 @@ Indonesian page \n
 **References**
 
 **Keywords:** \n
-Pāḷi Text heavy syllable fragmentizer, syllabification, syllabication, stressed syllable splitter, syllable breaks visualizer, emphasized syllable, closed syllable, open syllable, long vowel, short vowel, double consonant, tempo, duration, pacer, easy chanting
+Pāḷi Text heavy syllable separator, syllabification, syllabication, stressed syllable fragmentizer, syllable breaks visualizer, emphasized syllable, closed syllable, open syllable, long vowel, short vowel, double consonant, tempo, duration, pacer, easy chanting
 """
-
-# Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
-# If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-# forums](https://discuss.streamlit.io).
 
 st.sidebar.divider()
 show_app_code = st.sidebar.checkbox (label='Show app code')
