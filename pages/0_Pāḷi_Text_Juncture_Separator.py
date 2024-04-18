@@ -30,7 +30,7 @@ The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pā�
 It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instructors who are looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
 """
 
-st.markdown("<h4 style='text-align: center;'>For an example, here is a split stanza from Ratana Sutta:</h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: center;'>For an example, here is a split stanza from Ratana Sutta:</h6>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Yā — nī — dha bhū — tā — ni samā — gatā — ni —</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Bhum — mā — ni vā — yā — ni va an — talik — khe —</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Sab — be — va bhū — tā — sumanā — bhavan — tu —</p>", unsafe_allow_html=True)
