@@ -2673,7 +2673,10 @@ def animation_demo() -> None:
         for i in range(len(input_lines)):
             unsplit_OR_split = input_lines[i]+'\n'+'\n'+output_lines[i]+'\n'
             st.write(unsplit_OR_split)
-
+    else:
+        unsplit_OR_split = first_letters
+        st.write(unsplit_OR_split)
+      
 animation_demo()
 
 st.divider()
