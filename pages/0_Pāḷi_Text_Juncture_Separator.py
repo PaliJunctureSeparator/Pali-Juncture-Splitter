@@ -2684,29 +2684,21 @@ animation_demo()
 st.divider()
 
 st.markdown("<h6 style='text-align: center;'>How does it work?</h6>", unsafe_allow_html=True)
-st.markdown("<p>It works by adding breaks or visual spacers after every _heavy syllable_ (garu akkhara). The visual spacers act as temporal punctuations or juncture signs. You would then read the split text by dragging every syllable that is followed by a juncture sign.</p>", unsafe_allow_html=True)
+st.markdown("<p>It works by adding breaks or visual spacers after every heavy syllable (garu akkhara). The visual spacers act as temporal punctuations or juncture signs. You would then read the split text by dragging every syllable that is followed by a juncture sign.</p>", unsafe_allow_html=True)
 
 st.markdown("<h6 style='text-align: center;'>What is a heavy syllable?</h6>", unsafe_allow_html=True)
-st.markdown("<p>Syllables in Pāḷi are classified as heavy (garu) or light (lahu), whereas vowels are classified as either long (dīgha) or short (rassa). A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra/niggahīta (ṃ/ṁ).</p>", unsafe_allow_html=True)
+st.markdown("<p>Syllables in Pāḷi are classified as heavy (garu) or light (lahu), whereas vowels are classified as either long (dīgha) or short (rassa). A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra/niggahīta (ṃ/ṁ). On the other hand, a syllable is light if it contains a short vowel [a, i, u] not followed by a consonant cluster or an anusvāra/niggahīta (ṃ).</p>", unsafe_allow_html=True)
 
 st.markdown("<h6 style='text-align: center;'>Long vowels:</h6>", unsafe_allow_html=True)
-st.markdown("<p>[ā, ī, ū, e, o],</p>", unsafe_allow_html=True)
-st.markdown("<p>[a, i, u] + ṃ,</p>", unsafe_allow_html=True)
-st.markdown("<p>or</p>", unsafe_allow_html=True)
-st.markdown("<p>[a, i, u] + CC (double consonants)</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>[ā, ī, ū, e, o],</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>[a, i, u] + ṃ,</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>or</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>[a, i, u] + Consonant + Consonant</p>", unsafe_allow_html=True)
 
+st.markdown("<h6 style='text-align: center;'>Short vowels:</h6>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>[a, i, u] + Consonant + Vowel</p>", unsafe_allow_html=True)
 
 """
- \n
-
-_**Long vowels:**_ \n
-  \n
-
-And likewise, a syllable is light if it contains a short vowel [a, i, u] not followed by a consonant cluster or an anusvāra/niggahīta (ṃ).  \n
-
-_**Short vowels:**_ \n
-[a, i, u] + Cv  \n
-
 **Pāḷi Phonology**
 
 **Regional Variances**
