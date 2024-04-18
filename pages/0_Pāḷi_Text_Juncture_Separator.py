@@ -19,7 +19,7 @@ st.sidebar.divider()
 
 st.sidebar.header("Customize your conversion:")
 
-st.markdown("<h1 style='text-align: center;'>Pāḷi Text Juncture Splitter 🌴</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>🪷 Pāḷi Text Juncture Splitter 🌴</h1>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center;'>Read Pāḷi verses fluently.</h5>", unsafe_allow_html=True)
 st.divider()
 
