@@ -24,15 +24,17 @@ st.markdown("<h5 style='text-align: center;'>Read Pāḷi verses fluently.</h5>"
 st.divider()
 
 st.markdown("<h6 style='text-align: center;'>What is it and who is it for?</h6>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>What is it and who is it for?</p>", unsafe_allow_html=True)
 
 """
 The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
 It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instructors who are looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
 """
 
-
 st.markdown("<h6 style='text-align: center;'>For an example, here is a split stanza from Ratana Sutta:</h6>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>Yā — nī — dha bhū — tā — ni samā — gatā — ni —</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>Bhum — mā — ni vā — yā — ni va an — talik — khe —</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>Sab — be — va bhū — tā — sumanā — bhavan — tu —</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>Atho — pi sak — kac — ca suṇan — tu bhā — sitaṃ —</p>", unsafe_allow_html=True)
 """
 Yā — nī — dha bhū — tā — ni samā — gatā — ni —\n
 Bhum — mā — ni vā — yā — ni va an — talik — khe —\n
