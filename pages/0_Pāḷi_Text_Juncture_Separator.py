@@ -32,7 +32,7 @@ It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instru
 Yā — nī — dha bhū — tā — ni samā — gatā — ni —\n
 Bhum — mā — ni vā — yā — ni va an — talik — khe —\n
 Sab — be — va bhū — tā — sumanā — bhavan — tu —\n
-Atho — pi sak — kac — ca sunan — tu bhā — sitaṃ —\n
+Atho — pi sak — kac — ca suṇan — tu bhā — sitaṃ —\n
 
 """
 st.divider()
