@@ -27,8 +27,8 @@ st.divider()
 The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
 It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instructors looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
 \n
-**An example of split Metta Sutta:**\n
-Karanī — ya-mat — tha kusale — na —\n
+**As an example, here is a split stanza from Metta Sutta:**\n
+Karanī — yamat — tha kusale — na —\n
 Yan — tam — san — tam — padam — abhisamec — ca —\n
 Sak — ko — ujū — ca sū — jū — ca —\n
 Sū — vaco — cas — sa mudu anatimā — nī —\n
