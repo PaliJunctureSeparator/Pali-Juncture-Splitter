@@ -30,7 +30,7 @@ The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pā�
 It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instructors who are looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
 """
 
-st.markdown("<h6 style='text-align: center;'>For an example, here is a split stanza from Ratana Sutta:</h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: center;'>For an example, here is a split stanza from <em>Ratana Sutta</em>:</h6>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Yā — nī — dha bhū — tā — ni samā — gatā — ni —</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Bhum — mā — ni vā — yā — ni va an — talik — khe —</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Sab — be — va bhū — tā — sumanā — bhavan — tu —</p>", unsafe_allow_html=True)
@@ -38,7 +38,7 @@ st.markdown("<p style='text-align: center;'>Atho — pi sak — kac — ca suṇ
 
 st.divider()
 """
-**Start splitting by insert Pāḷi text here:**
+**Start splitting by inserting Pāḷi text here:**
 """
 def animation_demo() -> None:
     # Insert Text
@@ -2684,44 +2684,44 @@ animation_demo()
 st.divider()
 
 st.markdown("<h6 style='text-align: center;'>How does it work?</h6>", unsafe_allow_html=True)
-st.markdown("<p>It works by adding breaks or visual spacers after every heavy syllable (garu akkhara). The visual spacers act as temporal punctuations or juncture signs. You would then read the split text by dragging every syllable that is followed by a juncture sign.</p>", unsafe_allow_html=True)
+st.markdown("<p>It works by adding breaks or visual spacers after <em>every heavy syllable</em> (garu akkhara). The visual spacers act as temporal punctuations or juncture signs. You would then read the split text by dragging every syllable that is followed by a juncture sign.</p>", unsafe_allow_html=True)
 
 st.markdown("<h6 style='text-align: center;'>What is a heavy syllable?</h6>", unsafe_allow_html=True)
-st.markdown("<p>Syllables in Pāḷi are classified as heavy (garu) or light (lahu), whereas vowels are classified as either long (dīgha) or short (rassa). A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra/niggahīta (ṃ/ṁ). On the other hand, a syllable is light if it contains a short vowel [a, i, u] not followed by a consonant cluster or an anusvāra/niggahīta (ṃ).</p>", unsafe_allow_html=True)
+st.markdown("<p>Syllables in Pāḷi are classified as <em>heavy</em> (garu) or <em>light</em> (lahu), whereas vowels are classified as either <em>long</em> (dīgha) or <em>short</em> (rassa). A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra/niggahīta (ṃ/ṁ). On the other hand, a syllable is light if it contains a short vowel [a, i, u] not followed by a consonant cluster or an anusvāra/niggahīta.</p>", unsafe_allow_html=True)
 
 st.markdown("<h6 style='text-align: center;'>Long vowels:</h6>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>[ā, ī, ū, e, o],</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>[a, i, u] + ṃ,</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>or</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>[a, i, u] + Consonant + Consonant</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>• [ā, ī, ū, e, o]</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>• [a, i, u] + ṃ</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>• [a, i, u] + Consonant + Consonant</p>", unsafe_allow_html=True)
 
 st.markdown("<h6 style='text-align: center;'>Short vowels:</h6>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>[a, i, u] + Consonant + Vowel</p>", unsafe_allow_html=True)
 
+#"""
+#**Pāḷi Phonology**
+
+#**Regional Variances**
+
+#**Useful Links** \n
+#Pāḷi Text Juncture Splitter Website \n
+#View & download Parittā of the latest version with juncture signs:  \n
+#Pāḷi Text Syllable Splitter: \n
+#Pāḷi IPA pronunciation Generator: \n
+#Pāḷi Scripts Converter (Roman, Brahmi, Sinhalese, Khom Thai, Thai, Khmer, and more): [Aksharamukha](https://aksharamukha.appspot.com/converter): Indic script converter by Vinodh Rajan\n
+#Introduction to Pāḷi (pdf) \n
+#Pāḷi Study & Parittā Chanting Forum (Discord) \n
+#(YouTube Playlist) Pāḷi Pronunciation Guide \n
+
+#**Roadmap**
+#Give suggestions form \n
+#Copy to clipboard button \n
+#Download text \n
+#Line by line conversion \n
+#Indonesian page \n
+
+#**References**
+
 """
-**Pāḷi Phonology**
-
-**Regional Variances**
-
-**Useful Links** \n
-Pāḷi Text Juncture Splitter Website \n
-View & download Parittā of the latest version with juncture signs:  \n
-Pāḷi Text Syllable Splitter: \n
-Pāḷi IPA pronunciation Generator: \n
-Pāḷi Scripts Converter (Roman, Brahmi, Sinhalese, Khom Thai, Thai, Khmer, and more): [Aksharamukha](https://aksharamukha.appspot.com/converter): Indic script converter by Vinodh Rajan\n
-Introduction to Pāḷi (pdf) \n
-Pāḷi Study & Parittā Chanting Forum (Discord) \n
-(YouTube Playlist) Pāḷi Pronunciation Guide \n
-
-**Roadmap**
-Give suggestions form \n
-Copy to clipboard button \n
-Download text \n
-Line by line conversion \n
-Indonesian page \n
-
-**References**
-
 **Keywords:** \n
 Pāḷi Text heavy syllable separator, syllabification, syllabication, stressed syllable fragmentizer, syllable breaks visualizer, emphasized syllable, closed syllable, open syllable, long vowel, short vowel, double consonant, tempo, duration, pacer, easy chanting
 """
