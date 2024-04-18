@@ -2682,17 +2682,25 @@ def animation_demo() -> None:
 animation_demo()
 
 st.divider()
-"""
-**How does it work?**  \n
-It works by adding breaks or visual spacers after every _heavy syllable_ (garu akkhara). The visual spacers act as temporal punctuations or juncture signs. You would then read the split text by dragging every syllable that is followed by a juncture sign.  \n
-**What is a _heavy syllable_?**  \n
-Syllables in Pāḷi are classified as heavy (garu) or light (lahu), whereas vowels are classified as either long (dīgha) or short (rassa). A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra/niggahīta (ṃ/ṁ). \n
 
-_**Long vowels:**_ \n
-[ā, ī, ū, e, o],  \n
+st.markdown("<h6 style='text-align: center;'>How does it work?</h6>", unsafe_allow_html=True)
+st.markdown("<p>It works by adding breaks or visual spacers after every _heavy syllable_ (garu akkhara). The visual spacers act as temporal punctuations or juncture signs. You would then read the split text by dragging every syllable that is followed by a juncture sign.</p>", unsafe_allow_html=True)
+
+st.markdown("<h6 style='text-align: center;'>What is a heavy syllable?</h6>", unsafe_allow_html=True)
+st.markdown("<p>Syllables in Pāḷi are classified as heavy (garu) or light (lahu), whereas vowels are classified as either long (dīgha) or short (rassa). A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra/niggahīta (ṃ/ṁ).</p>", unsafe_allow_html=True)
+
+st.markdown("<h6 style='text-align: center;'>Long vowels:</h6>", unsafe_allow_html=True)
+st.markdown("<p>[ā, ī, ū, e, o],  \n
 [a, i, u] + ṃ,  \n
 or  \n
-[a, i, u] + CC  \n
+[a, i, u] + CC (double consonants)</p>", unsafe_allow_html=True)
+
+
+"""
+ \n
+
+_**Long vowels:**_ \n
+  \n
 
 And likewise, a syllable is light if it contains a short vowel [a, i, u] not followed by a consonant cluster or an anusvāra/niggahīta (ṃ).  \n
 
