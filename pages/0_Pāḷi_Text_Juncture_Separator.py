@@ -24,15 +24,15 @@ st.markdown("<h5 style='text-align: center;'>Read Pāḷi verses fluently.</h5>"
 st.divider()
 """
 **What is it and who is it for?** \n
-The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
+     The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
 It is perfect for beginners and intermediates in Pāḷi reading, Pāḷi instructors looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
 \n
 \n
 **As an example, here is a split stanza from Metta Sutta:**\n
-Karanī — yamat — tha kusale — na —\n
-Yan — tam — san — tam — padam — abhisamec — ca —\n
-Sak — ko — ujū — ca sū — jū — ca —\n
-Sū — vaco — cas — sa mudu anatimā — nī —\n
+     Karanī — yamat — tha kusale — na —\n
+     Yan — tam — san — tam — padam — abhisamec — ca —\n
+     Sak — ko — ujū — ca sū — jū — ca —\n
+     Sū — vaco — cas — sa mudu anatimā — nī —\n
 
 """
 st.divider()
