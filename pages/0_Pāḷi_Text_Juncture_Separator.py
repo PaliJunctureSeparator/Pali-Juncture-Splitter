@@ -23,7 +23,9 @@ st.markdown("<h1 style='text-align: center;'>🪷 Pāḷi Text Juncture Splitter
 st.markdown("<h3 style='text-align: center;'>For easy Pāḷi reading.</h3>", unsafe_allow_html=True)
 st.divider()
 
-st.markdown("<h6 style='text-align: center;'>What is it and who is it for?</h6>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>What is it and who is it for?</h6>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center;'>What is it and who is it for?</h6>", unsafe_allow_html=True)
+
 
 """
 The _Pāḷi Text Juncture Splitter_ is a fragmentizing tool that break up Pāḷi texts based on the class of each syllable (heavy or light) so that you may read them _effortlessly_ with just the right tempo.\n
