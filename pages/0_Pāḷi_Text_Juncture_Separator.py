@@ -2721,9 +2721,16 @@ st.markdown("<p style='text-align: center;'>[a, i, u] + Consonant + Vowel</p>", 
 
 #**References**
 
+st.sidebar.divider()
+
+st.markdown("<p>We are looking for ways to improve this web tool. If you have any suggestions or ideas, please share them with us at samaneracalvin@gmail.com.</p>", unsafe_allow_html=True)
+st.markdown("<p>online open source and free website app for anyone to use, distribute, edit and build upon in any medium or format.</p>", unsafe_allow_html=True)
+
+st.sidebar.divider()
+
 """
 **Keywords:** \n
-Pāḷi Text heavy syllable separator, syllabification, syllabication, stressed syllable fragmentizer, syllable breaks visualizer, emphasized syllable, closed syllable, open syllable, long vowel, short vowel, double consonant, tempo, duration, pacer, easy chanting
+Pāḷi text heavy syllable separator, syllabification, syllabication, stressed syllable fragmentizer, syllable breaks visualizer, emphasized syllable, closed syllable, open syllable, long vowel, short vowel, double consonant, tempo, duration, pacer, easy chanting
 """
 
 st.sidebar.divider()
