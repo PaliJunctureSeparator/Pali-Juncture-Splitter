@@ -2721,12 +2721,12 @@ st.markdown("<p style='text-align: center;'>[a, i, u] + Consonant + Vowel</p>", 
 
 #**References**
 
-st.sidebar.divider()
+st.divider()
 
 st.markdown("<p>We are looking for ways to improve this web tool. If you have any suggestions or ideas, please share them with us at samaneracalvin@gmail.com.</p>", unsafe_allow_html=True)
 st.markdown("<p>online open source and free website app for anyone to use, distribute, edit and build upon in any medium or format.</p>", unsafe_allow_html=True)
 
-st.sidebar.divider()
+st.divider()
 
 """
 **Keywords:** \n
