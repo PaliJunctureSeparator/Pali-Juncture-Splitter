@@ -2684,9 +2684,9 @@ animation_demo()
 st.divider()
 """
 **How does it work?**  \n
-It works by adding breaks or visual spacers after every _heavy syllable_. The visual spacers act as a temporal punctuation or a juncture sign. You would then read the split text as if the juncture signs were the new spaces.  \n
+It works by adding breaks or visual spacers after every _heavy syllable_ (garu akkhara). The visual spacers act as a temporal punctuation or a juncture sign. You would then read the split text as if the juncture signs were the new spaces.  \n
 **What is a _heavy syllable_?**  \n
-Syllables in Pali are classed as heavy or light, and vowels are classed as either short or long. A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra or niggahīta (ṃ). The sign of a long vowel is a dash/macron [¯] placed over it.  \n
+Syllables in Pāḷi are classed as heavy (garu) or light (lahu), and vowels are classed as either long (dīgha) or short (rassa). A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra/niggahīta (ṃ/ṁ). \n
 
 _**Long vowels:**_ \n
 [ā, ī, ū, e, o],  \n
