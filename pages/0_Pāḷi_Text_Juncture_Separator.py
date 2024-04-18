@@ -7,7 +7,7 @@ import pandas as pd
 
 LOGGER = get_logger(__name__)
 
-st.set_page_config(page_title="Pāḷi Text Juncture Splitter", page_icon="🌴")
+st.set_page_config(page_title="Pāḷi Text Juncture Splitterrrrr", page_icon="🌴")
 
 # Sidebar
 
