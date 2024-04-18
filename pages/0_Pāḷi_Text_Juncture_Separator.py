@@ -2690,10 +2690,10 @@ st.markdown("<h6 style='text-align: center;'>What is a heavy syllable?</h6>", un
 st.markdown("<p>Syllables in Pāḷi are classified as heavy (garu) or light (lahu), whereas vowels are classified as either long (dīgha) or short (rassa). A syllable is heavy if the vowel is long, or followed by a consonant cluster (conjunct/double consonant), or an anusvāra/niggahīta (ṃ/ṁ).</p>", unsafe_allow_html=True)
 
 st.markdown("<h6 style='text-align: center;'>Long vowels:</h6>", unsafe_allow_html=True)
-st.markdown("<p>[ā, ī, ū, e, o],  \n
-[a, i, u] + ṃ,  \n
-or  \n
-[a, i, u] + CC (double consonants)</p>", unsafe_allow_html=True)
+st.markdown("<p>[ā, ī, ū, e, o],</p>", unsafe_allow_html=True)
+st.markdown("<p>[a, i, u] + ṃ,</p>", unsafe_allow_html=True)
+st.markdown("<p>or</p>", unsafe_allow_html=True)
+st.markdown("<p>[a, i, u] + CC (double consonants)</p>", unsafe_allow_html=True)
 
 
 """
