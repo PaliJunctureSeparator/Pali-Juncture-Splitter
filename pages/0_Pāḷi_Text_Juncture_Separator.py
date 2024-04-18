@@ -42,7 +42,7 @@ st.divider()
 """
 def animation_demo() -> None:
     # Insert Text
-    insert_text = st.text_area('', height=200, placeholder="e.g. "Namo tassa bhagavato arahato sammāsambuddhassa."")
+    insert_text = st.text_area('', height=200, placeholder="e.g. 'Namo tassa bhagavato arahato sammāsambuddhassa.'")
 
     # Medial anusvāra/niggahīta to nasal (gaṃgā → gaṅgā)
     nasal_check = st.sidebar.checkbox(label='Medial anusvāra/niggahīta to nasal (gaṃgā → gaṅgā)')
