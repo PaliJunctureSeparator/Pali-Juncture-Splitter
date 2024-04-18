@@ -2739,4 +2739,6 @@ show_app_code = st.sidebar.checkbox (label='Show app code')
 if show_app_code:
     show_code(animation_demo)
 
- st.sidebar.markdown('View [GitHub repository](https://github.com/PaliJunctureSeparator/Pali-Juncture-Splitter.git)')
+st.sidebar.markdown("tessttett")
+
+st.sidebar.markdown('View [GitHub repository](https://github.com/PaliJunctureSeparator/Pali-Juncture-Splitter.git)')
